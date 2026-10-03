@@ -1,0 +1,49 @@
+name: Update leaderboard
+
+on:
+  schedule:
+    # 08:00 UTC = 1am Pacific (PDT), just after the previous challenge day closes.
+    - cron: "0 8 * * *"
+  workflow_dispatch:        # "Run workflow" button for manual refreshes
+
+permissions:
+  contents: write   # commit the updated leaderboard.json (keeps the final board after Oct 31)
+  pages: write
+  id-token: write
+
+concurrency:
+  group: leaderboard
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rescan Discord and rebuild the board
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+        run: python scripts/score.py   # exits non-zero (and writes nothing) on any failure
+
+      - name: Commit updated board
+        run: |
+          git config user.name "leaderboard-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add site/leaderboard.json
+          git diff --cached --quiet || git commit -m "Update leaderboard $(date -u +%Y-%m-%d)"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

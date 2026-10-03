@@ -1,0 +1,26 @@
+name: Admin report
+
+# Sends standings, tie flags and spot-check CSVs as a Discord DM to admin_user_id in config.json.
+# Optional: set repo variable ADMIN_CHANNEL_ID to post in a private channel instead.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 16 * * 1"   # Mondays, 9am Pacific
+    - cron: "0 9 1 11 *"   # Nov 1, 2am Pacific: final results
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rescan and post admin report
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          ADMIN_CHANNEL_ID: ${{ vars.ADMIN_CHANNEL_ID }}
+        run: python scripts/score.py --post-admin

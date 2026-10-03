@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>October Challenge</title>
+<meta name="description" content="Live leaderboard for the UGC Buildout October Challenge, updated daily.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #eef1f7;
+  --surface: #ffffff;
+  --ink: #1a2142;
+  --muted: #5d6585;
+  --line: #d9deeb;
+  --accent: #4a3df0;
+  --accent-soft: #e6e3fe;
+  --cell-0: #e3e7f1;
+  --cell-1: #d6d1fd;
+  --cell-2: #b3aafb;
+  --cell-3: #8a7cf7;
+  --cell-4: #6253f2;
+  --cell-5: #3a2bc9;
+  --gold: #c98f00;
+  --gold-soft: #fbefcc;
+  --silver: #8792aa;
+  --bronze: #b86e3b;
+  --today: #1a2142;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11142a; --surface: #191d39; --ink: #e8eaf7; --muted: #9aa0c2; --line: #2b3157;
+    --accent: #8f84ff; --accent-soft: #2a2862;
+    --cell-0: #252a4d; --cell-1: #3a3580; --cell-2: #5144b3; --cell-3: #6a5be0; --cell-4: #8b7fff; --cell-5: #b8b0ff;
+    --gold: #f0bd3a; --gold-soft: #3a3115; --today: #e8eaf7;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11142a; --surface: #191d39; --ink: #e8eaf7; --muted: #9aa0c2; --line: #2b3157;
+  --accent: #8f84ff; --accent-soft: #2a2862;
+  --cell-0: #252a4d; --cell-1: #3a3580; --cell-2: #5144b3; --cell-3: #6a5be0; --cell-4: #8b7fff; --cell-5: #b8b0ff;
+  --gold: #f0bd3a; --gold-soft: #3a3115; --today: #e8eaf7;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 400 16px/1.5 "Instrument Sans", system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 48px 24px 80px; }
+h1, h2, h3, .num { font-family: "Bricolage Grotesque", system-ui, sans-serif; }
+
+/* ---------- Header ---------- */
+header { display: grid; grid-template-columns: 1fr auto; gap: 8px 32px; align-items: end; }
+.community { margin: 0 0 6px; font-weight: 600; color: var(--accent); }
+h1 { margin: 0; font-weight: 800; font-size: clamp(2.4rem, 6vw, 4.25rem); line-height: 0.95; letter-spacing: -0.03em; }
+.dates { margin: 12px 0 0; color: var(--muted); }
+.countdown { text-align: right; }
+.countdown strong { display: block; font: 700 2.5rem/1 "Bricolage Grotesque", sans-serif; letter-spacing: -0.02em; }
+.countdown strong span { color: var(--muted); font-weight: 500; }
+.countdown > span { color: var(--muted); }
+
+/* ---------- Output sentence + daily bars ---------- */
+.together { margin: 44px 0 0; font-size: clamp(1.15rem, 2.4vw, 1.5rem); line-height: 1.35; max-width: 34ch; }
+.together .num { font-weight: 800; font-size: 1.6em; letter-spacing: -0.02em; color: var(--accent); }
+.bars-block { margin-top: 28px; }
+.bars-caption { margin: 0 0 10px; color: var(--muted); font-size: 0.875rem; }
+.bars { display: grid; grid-template-columns: repeat(var(--days), 1fr); gap: 4px; align-items: end; height: 96px; }
+.bar { height: 100%; display: flex; align-items: flex-end; }
+.bar i {
+  display: block; width: 100%; height: max(var(--h), 3px);
+  background: var(--accent); border-radius: 4px 4px 1px 1px;
+  transform-origin: bottom; animation: grow 700ms cubic-bezier(.2,.8,.2,1) both;
+  animation-delay: calc(var(--i) * 20ms);
+}
+.bar.future i { background: var(--cell-0); height: 3px; }
+.bar.today i { outline: 2px solid var(--today); outline-offset: 2px; }
+.bar-labels { display: grid; grid-template-columns: repeat(var(--days), 1fr); gap: 4px; margin-top: 8px; font-size: 0.75rem; color: var(--muted); text-align: center; }
+.bar-labels .today { color: var(--ink); font-weight: 600; }
+@keyframes grow { from { transform: scaleY(0); } }
+
+/* ---------- Prize leaders ---------- */
+.prizes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+.prize { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; }
+.prize h2 { margin: 0; font-size: 1.125rem; font-weight: 700; }
+.prize .how { margin: 2px 0 14px; color: var(--muted); font-size: 0.875rem; }
+.leader { display: flex; align-items: center; gap: 12px; }
+.leader .avatar { width: 40px; height: 40px; background: var(--gold-soft); color: var(--gold); }
+.leader-name { font: 700 1.375rem/1.15 "Bricolage Grotesque", sans-serif; }
+.leader-score { color: var(--muted); }
+.flag { margin: 12px 0 0; font-size: 0.875rem; color: var(--muted); }
+.flag strong { color: var(--ink); }
+
+/* ---------- Rules ---------- */
+.rules { margin-top: 40px; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+         display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 40px; }
+.rules h2 { margin: 0 0 10px; font-size: 1.25rem; }
+.rules ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.rules li { display: grid; grid-template-columns: 52px 1fr; gap: 12px; align-items: baseline; }
+.pts { font: 700 0.875rem "Bricolage Grotesque", sans-serif; color: var(--accent); background: var(--accent-soft);
+       border-radius: 99px; padding: 2px 0; text-align: center; }
+.rules li span:last-child { max-width: 52ch; }
+.rules .fine { margin: 14px 0 0; color: var(--muted); font-size: 0.875rem; max-width: 60ch; }
+.chan { font-weight: 600; }
+
+/* ---------- Board ---------- */
+.board-head { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; margin: 40px 0 16px; }
+.tabs { display: inline-flex; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+.tabs button {
+  font: 600 0.9375rem "Instrument Sans", sans-serif; color: var(--muted); background: none; border: 0;
+  border-radius: 8px; padding: 8px 16px; cursor: pointer;
+}
+.tabs button[aria-selected="true"] { background: var(--accent); color: #fff; }
+.search { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+          border-radius: 10px; padding: 8px 14px; width: min(260px, 100%); }
+.search:focus-visible, .row:focus-visible, .tabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.legend { display: flex; align-items: center; gap: 6px; font-size: 0.8125rem; color: var(--muted); margin: -4px 0 12px; }
+.legend .cell { width: 12px; height: 12px; }
+
+ol.board { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.row {
+  display: grid; grid-template-columns: 44px minmax(140px, 1.1fr) minmax(0, 2fr) 72px;
+  gap: 16px; align-items: center; padding: 12px 20px; border-top: 1px solid var(--line); cursor: pointer;
+}
+li:first-child > .row { border-top: 0; }
+.row:hover { background: color-mix(in srgb, var(--accent) 5%, transparent); }
+.rank { font: 700 1.125rem "Bricolage Grotesque", sans-serif; color: var(--muted); text-align: center; }
+.rank.medal { width: 32px; height: 32px; line-height: 32px; border-radius: 50%; color: #fff; justify-self: center; font-size: 1rem; }
+.rank.r1 { background: var(--gold); } .rank.r2 { background: var(--silver); } .rank.r3 { background: var(--bronze); }
+.who { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.avatar { flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--cell-1); color: var(--ink);
+          display: grid; place-items: center; font-weight: 600; font-size: 0.875rem; overflow: hidden; position: relative; }
+.avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.name-wrap { min-width: 0; }
+.name { display: block; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tag { display: block; font-size: 0.75rem; color: var(--muted); }
+.tag.lead { color: var(--gold); font-weight: 600; }
+.streak { display: grid; grid-template-columns: repeat(var(--days), minmax(0, 1fr)); gap: 3px; max-width: 460px; }
+.cell { aspect-ratio: 1; border-radius: 3px; background: var(--cell-0); }
+.cell.future { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+.c1 { background: var(--cell-1); } .c2 { background: var(--cell-2); } .c3 { background: var(--cell-3); }
+.c4 { background: var(--cell-4); } .c5 { background: var(--cell-5); }
+.meter { height: 10px; border-radius: 99px; background: var(--cell-0); max-width: 460px; overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
+.score { text-align: right; font: 800 1.5rem/1 "Bricolage Grotesque", sans-serif; }
+.score small { display: block; font: 500 0.75rem "Instrument Sans", sans-serif; color: var(--muted); margin-top: 3px; }
+
+.detail { display: none; padding: 0 20px 16px 80px; }
+li.open .detail { display: block; }
+.detail dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px 16px; margin: 0; }
+.detail dt { font-size: 0.8125rem; color: var(--muted); }
+.detail dd { margin: 0; font-weight: 600; }
+
+.note { padding: 40px 20px; text-align: center; color: var(--muted); }
+.note strong { display: block; color: var(--ink); font-size: 1.125rem; margin-bottom: 4px; }
+footer { margin-top: 24px; font-size: 0.875rem; color: var(--muted); }
+
+@media (max-width: 760px) {
+  .wrap { padding: 32px 16px 64px; }
+  header { grid-template-columns: 1fr; }
+  .countdown { text-align: left; }
+  .prizes, .rules { grid-template-columns: 1fr; }
+  .bars { height: 72px; gap: 2px; }
+  .bar-labels { gap: 2px; font-size: 0.625rem; }
+  .bar-labels span:not(.edge):not(.today) { visibility: hidden; }
+  .row { grid-template-columns: 36px minmax(0, 1fr) auto; grid-template-areas: "rank who score" ". vis vis";
+         gap: 8px 12px; padding: 12px 16px; }
+  .rank { grid-area: rank; } .who { grid-area: who; } .score { grid-area: score; }
+  .streak, .meter { grid-area: vis; max-width: none; } .streak { gap: 2px; }
+  .detail { padding: 0 16px 16px 64px; }
+  .board-head .search { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .bar i { animation: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <p class="community" id="community"></p>
+      <h1 id="title">October Challenge</h1>
+      <p class="dates" id="dates"></p>
+    </div>
+    <div class="countdown" id="countdown"></div>
+  </header>
+
+  <p class="together" id="together"></p>
+  <section class="bars-block" aria-label="Points earned by the community each day">
+    <p class="bars-caption">Points the community earned each day</p>
+    <div class="bars" id="bars" role="img"></div>
+    <div class="bar-labels" id="bar-labels" aria-hidden="true"></div>
+  </section>
+
+  <section class="prizes" aria-label="Prize leaders">
+    <div class="prize" id="prize1"></div>
+    <div class="prize" id="prize2"></div>
+  </section>
+
+  <section class="rules">
+    <div>
+      <h2>Most Consistent: earn up to 5 points a day</h2>
+      <ul>
+        <li><span class="pts">+1</span><span>Post your daily win in <span class="chan">#wins</span>.</span></li>
+        <li><span class="pts">+2</span><span>Post in <span class="chan">#october-challenge</span> starting with “Done” once your 10 activities are finished. Add your pitches, applications and videos if you like.</span></li>
+        <li><span class="pts">+2</span><span>Share a link to your own social post in <span class="chan">#share-your-socials</span>.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Most Active: be part of the conversation</h2>
+      <ul>
+        <li><span class="pts">+1</span><span>Every message in <span class="chan">#general</span>, <span class="chan">#content-review</span> or <span class="chan">#ugc-opportunities</span>.</span></li>
+        <li><span class="pts">+1</span><span>Every reply to another student’s post, or to Antoine’s, in <span class="chan">#wins</span> or <span class="chan">#share-your-socials</span>, including in its thread.</span></li>
+      </ul>
+      <p class="fine">Messages need at least 3 words, not counting emoji. “gm”, “lol”, stickers and GIFs don’t count. Deleted messages lose their points. Each student can win one prize.</p>
+    </div>
+  </section>
+
+  <div class="board-head">
+    <div class="tabs" role="tablist" aria-label="Leaderboards">
+      <button role="tab" id="tab-points" aria-selected="true" aria-controls="board">Most Consistent</button>
+      <button role="tab" id="tab-messages" aria-selected="false" aria-controls="board">Most Active</button>
+    </div>
+    <input class="search" id="search" type="search" placeholder="Find a student" aria-label="Find a student">
+  </div>
+  <div class="legend" id="legend" aria-hidden="true">
+    Points each day <span class="cell"></span><span class="cell c1"></span><span class="cell c3"></span><span class="cell c5"></span>
+  </div>
+  <ol class="board" id="board" role="tabpanel"><li class="note">Loading leaderboard…</li></ol>
+  <footer id="footer"></footer>
+</div>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const fmtDay = (iso, opts) => new Date(iso + "T12:00:00Z").toLocaleDateString(undefined, { timeZone: "UTC", ...opts });
+  const plural = (n, one, many) => `${n.toLocaleString()} ${n === 1 ? one : many}`;
+  const sum = (o) => Object.values(o || {}).reduce((a, b) => a + b, 0);
+
+  function daysBetween(start, end) {
+    const out = [];
+    for (let d = new Date(start + "T00:00:00Z"); d <= new Date(end + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() + 1)) out.push(d.toISOString().slice(0, 10));
+    return out;
+  }
+  function timeAgo(iso) {
+    const mins = Math.round((Date.now() - new Date(iso)) / 60000);
+    if (mins < 60) return mins < 1 ? "just now" : plural(mins, "minute", "minutes") + " ago";
+    const hrs = Math.round(mins / 60);
+    return hrs < 24 ? plural(hrs, "hour", "hours") + " ago" : plural(Math.round(hrs / 24), "day", "days") + " ago";
+  }
+  function avatarHtml(m, cls = "") {
+    const img = m.avatar ? `<img src="https://cdn.discordapp.com/avatars/${esc(m.id)}/${esc(m.avatar)}.png?size=64" alt="" loading="lazy" onerror="this.remove()">` : "";
+    return `<span class="avatar ${cls}">${esc((m.display_name || "?").trim().charAt(0).toUpperCase())}${img}</span>`;
+  }
+  function rankList(members, key) {
+    let rank = 0, prev = null;
+    return [...members].sort((a, b) => b[key] - a[key] || a.display_name.localeCompare(b.display_name))
+      .map((m, i) => { if (m[key] !== prev) { rank = i + 1; prev = m[key]; } return { m, rank }; });
+  }
+
+  function render(data) {
+    const days = daysBetween(data.challenge_start, data.challenge_end);
+    const today = new Intl.DateTimeFormat("en-CA", { timeZone: data.timezone }).format(new Date());
+    const idx = days.indexOf(today);
+    const elapsed = today < data.challenge_start ? 0 : idx >= 0 ? idx + 1 : days.length;
+    const byId = Object.fromEntries(data.members.map((m) => [m.id, m]));
+    const t = data.totals, st = data.standings, maxDay = data.max_points_per_day || 5;
+    document.documentElement.style.setProperty("--days", days.length);
+
+    document.title = data.challenge_name + " leaderboard";
+    $("community").textContent = data.community_name || "";
+    $("title").textContent = data.challenge_name;
+    $("dates").textContent = fmtDay(data.challenge_start, { month: "long", day: "numeric" }) + " to " +
+      fmtDay(data.challenge_end, { month: "long", day: "numeric", year: "numeric" }) + ", Pacific time";
+
+    if (data.final || today > data.challenge_end) {
+      $("countdown").innerHTML = `<strong>Final results</strong><span>The challenge has ended</span>`;
+    } else if (today < data.challenge_start) {
+      const n = daysBetween(today, data.challenge_start).length - 1;
+      $("countdown").innerHTML = `<strong>${n}</strong><span>${n === 1 ? "day" : "days"} until it starts</span>`;
+    } else {
+      const left = days.length - idx - 1;
+      $("countdown").innerHTML = `<strong>Day ${idx + 1}<span> of ${days.length}</span></strong>` +
+        `<span>${left === 0 ? "Last day to earn points" : plural(left, "day", "days") + " left"}</span>`;
+    }
+
+    $("together").innerHTML = `Together we’ve sent <span class="num">${t.pitches.toLocaleString()}</span> pitches, ` +
+      `<span class="num">${t.applications.toLocaleString()}</span> applications and ` +
+      `<span class="num">${t.videos.toLocaleString()}</span> videos.`;
+
+    // Daily community points
+    const perDay = Object.fromEntries(days.map((d) => [d, 0]));
+    for (const m of data.members) for (const [d, p] of Object.entries(m.daily || {})) if (d in perDay) perDay[d] += sum(p);
+    const peak = Math.max(1, ...Object.values(perDay));
+    $("bars").innerHTML = days.map((d, i) => {
+      const cls = d > today ? "future" : d === today ? "today" : "";
+      const label = `${fmtDay(d, { month: "short", day: "numeric" })}: ${d > today ? "upcoming" : perDay[d] + " points"}`;
+      return `<div class="bar ${cls}" title="${label}" style="--i:${i}"><i style="--h:${(perDay[d] / peak) * 100}%"></i></div>`;
+    }).join("");
+    $("bars").setAttribute("aria-label", `${t.points} points earned so far, best day ${peak} points`);
+    $("bar-labels").innerHTML = days.map((d, i) => {
+      const cls = d === today ? "today" : (i === 0 || i === days.length - 1) ? "edge" : "";
+      return `<span class="${cls}">${fmtDay(d, { day: "numeric" })}</span>`;
+    }).join("");
+
+    // Prize leaders
+    const verb = data.final ? "Winner" : "Leading now";
+    const endLabel = fmtDay(data.challenge_end, { month: "long", day: "numeric" });
+    function prizeCard(title, how, prize, scoreText) {
+      const leaders = prize.leaders.map((id) => byId[id]).filter(Boolean);
+      let body;
+      if (!leaders.length) {
+        body = `<p class="flag">No one has scored yet. Your first post puts you on the board.</p>`;
+      } else {
+        body = `<div class="leader">${avatarHtml(leaders[0])}<div><div class="leader-name">${leaders.map((m) => esc(m.display_name)).join(" & ")}</div>` +
+          `<div class="leader-score">${verb}, ${scoreText(prize.score)}</div></div></div>`;
+        if (prize.tie) body += `<p class="flag"><strong>Tied.</strong> If it ends this way, the prize is split.</p>`;
+      }
+      return `<h2>${title}</h2><p class="how">${how}</p>${body}`;
+    }
+    $("prize1").innerHTML = prizeCard("Most Consistent", `Most points by ${endLabel}`, st.most_consistent,
+      (s) => `${s} of ${maxDay * Math.max(elapsed, 1)} possible points`);
+    let p2note = "";
+    const topTalker = rankList(data.members, "messages")[0];
+    if (topTalker && topTalker.m.messages > 0 && st.most_active.ineligible.includes(topTalker.m.id)) {
+      p2note = `<p class="flag">${esc(topTalker.m.display_name)} has the most messages but leads Most Consistent. One prize per student, so this goes to the next highest.</p>`;
+    }
+    $("prize2").innerHTML = prizeCard("Most Active", `Most qualifying messages by ${endLabel}`, st.most_active,
+      (s) => plural(s, "message", "messages")) + p2note;
+
+    // Board
+    const p1Lead = new Set(st.most_consistent.leaders), p2Lead = new Set(st.most_active.leaders);
+    const lists = { points: rankList(data.members, "points"), messages: rankList(data.members, "messages") };
+    const maxMsgs = Math.max(1, ...data.members.map((m) => m.messages));
+    let view = "points", query = "";
+
+    function rowHtml({ m, rank }) {
+      const medal = rank <= 3 && m[view] > 0 ? ` medal r${rank}` : "";
+      let tag = "";
+      if (view === "points" && p1Lead.has(m.id)) tag = `<span class="tag lead">${verb}</span>`;
+      if (view === "messages" && p2Lead.has(m.id)) tag = `<span class="tag lead">${verb}</span>`;
+      if (view === "messages" && p1Lead.has(m.id)) tag = `<span class="tag">Leads Most Consistent</span>`;
+      const vis = view === "points"
+        ? `<span class="streak" aria-hidden="true">${days.map((d) => d > today ? `<span class="cell future"></span>`
+            : `<span class="cell${sum(m.daily[d]) ? " c" + Math.min(sum(m.daily[d]), 5) : ""}"></span>`).join("")}</span>`
+        : `<span class="meter" aria-hidden="true"><i style="width:${(m.messages / maxMsgs) * 100}%"></i></span>`;
+      const score = view === "points" ? `${m.points}<small>points</small>` : `${m.messages}<small>messages</small>`;
+      return `<li>
+        <div class="row" tabindex="0" role="button" aria-expanded="false"
+             aria-label="Rank ${rank}, ${esc(m.display_name)}, ${view === "points" ? m.points + " points" : m.messages + " messages"}. Show details.">
+          <span class="rank${medal}">${rank}</span>
+          <span class="who">${avatarHtml(m)}<span class="name-wrap"><span class="name">${esc(m.display_name)}</span>${tag}</span></span>
+          ${vis}
+          <span class="score">${score}</span>
+        </div>
+        <div class="detail"><dl>
+          <div><dt>Daily wins</dt><dd>${plural(m.win_days, "day", "days")}</dd></div>
+          <div><dt>“Done” posts</dt><dd>${plural(m.done_days, "day", "days")}</dd></div>
+          <div><dt>Social posts</dt><dd>${plural(m.brand_days, "day", "days")}</dd></div>
+          <div><dt>Total points</dt><dd>${m.points}</dd></div>
+          <div><dt>Qualifying messages</dt><dd>${m.messages}</dd></div>
+        </dl></div>
+      </li>`;
+    }
+
+    function draw() {
+      const q = query.trim().toLowerCase();
+      const rows = lists[view].filter((r) => !q || r.m.display_name.toLowerCase().includes(q));
+      $("legend").style.visibility = view === "points" ? "visible" : "hidden";
+      if (!data.members.length) {
+        $("board").innerHTML = `<li class="note"><strong>No students yet</strong>Students show up here after the next daily update.</li>`;
+      } else if (!rows.length) {
+        $("board").innerHTML = `<li class="note"><strong>No student matches “${esc(query)}”</strong>Check the spelling, or clear the search to see everyone.</li>`;
+      } else {
+        $("board").innerHTML = rows.map(rowHtml).join("");
+      }
+    }
+    function setView(v) {
+      view = v;
+      $("tab-points").setAttribute("aria-selected", v === "points");
+      $("tab-messages").setAttribute("aria-selected", v === "messages");
+      draw();
+    }
+    $("tab-points").addEventListener("click", () => setView("points"));
+    $("tab-messages").addEventListener("click", () => setView("messages"));
+    $("search").addEventListener("input", (e) => { query = e.target.value; draw(); });
+    const toggle = (row) => row.setAttribute("aria-expanded", row.parentElement.classList.toggle("open"));
+    $("board").addEventListener("click", (e) => { const r = e.target.closest(".row"); if (r) toggle(r); });
+    $("board").addEventListener("keydown", (e) => {
+      const r = e.target.closest(".row");
+      if (r && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(r); }
+    });
+    draw();
+
+    $("footer").textContent = `Updated ${timeAgo(data.generated_at)}. The board refreshes every morning with the previous day’s posts.`;
+  }
+
+  fetch("leaderboard.json", { cache: "no-store" })
+    .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(render)
+    .catch((err) => {
+      $("board").innerHTML = `<li class="note"><strong>The leaderboard couldn’t load</strong>leaderboard.json is missing or unreadable (${esc(err.message)}). Try again after the next daily update.</li>`;
+    });
+})();
+</script>
+</body>
+</html>

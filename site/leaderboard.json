@@ -1,0 +1,1254 @@
+{
+  "generated_at": "2026-10-02T03:56:33Z",
+  "challenge_name": "October Challenge",
+  "community_name": "UGC Buildout",
+  "challenge_start": "2026-09-23",
+  "challenge_end": "2026-10-22",
+  "timezone": "America/Los_Angeles",
+  "final": false,
+  "max_points_per_day": 5,
+  "totals": {
+    "students": 38,
+    "points": 545,
+    "messages": 456,
+    "pitches": 649,
+    "applications": 367,
+    "videos": 208
+  },
+  "standings": {
+    "most_consistent": {
+      "leaders": [
+        "1000"
+      ],
+      "score": 37,
+      "tie": false
+    },
+    "most_active": {
+      "leaders": [
+        "1003"
+      ],
+      "score": 39,
+      "tie": false,
+      "ineligible": [
+        "1000"
+      ]
+    }
+  },
+  "members": [
+    {
+      "id": "1000",
+      "display_name": "Enya",
+      "avatar": null,
+      "points": 37,
+      "win_days": 9,
+      "done_days": 9,
+      "brand_days": 5,
+      "messages": 11,
+      "daily": {
+        "2026-09-23": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-24": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-25": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-26": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-27": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-28": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-29": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-30": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-10-01": {
+          "done": 2,
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1023",
+      "display_name": "Leo",
+      "avatar": null,
+      "points": 36,
+      "win_days": 8,
+      "done_days": 7,
+      "brand_days": 7,
+      "messages": 34,
+      "daily": {
+        "2026-09-23": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-24": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-25": {
+          "win": 1
+        },
+        "2026-09-26": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-27": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-28": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-29": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-30": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-10-01": {
+          "win": 1,
+          "brand": 2
+        }
+      }
+    },
+    {
+      "id": "1029",
+      "display_name": "Malik",
+      "avatar": null,
+      "points": 28,
+      "win_days": 4,
+      "done_days": 7,
+      "brand_days": 5,
+      "messages": 4,
+      "daily": {
+        "2026-09-23": {
+          "done": 2
+        },
+        "2026-09-24": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-25": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-26": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-27": {
+          "done": 2
+        },
+        "2026-09-29": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-30": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-10-01": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        }
+      }
+    },
+    {
+      "id": "1011",
+      "display_name": "Ethan",
+      "avatar": null,
+      "points": 26,
+      "win_days": 6,
+      "done_days": 6,
+      "brand_days": 4,
+      "messages": 12,
+      "daily": {
+        "2026-09-23": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-24": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-25": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-26": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-29": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-30": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-10-01": {
+          "brand": 2
+        }
+      }
+    },
+    {
+      "id": "1004",
+      "display_name": "Sofia",
+      "avatar": null,
+      "points": 25,
+      "win_days": 3,
+      "done_days": 5,
+      "brand_days": 6,
+      "messages": 0,
+      "daily": {
+        "2026-09-23": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-24": {
+          "brand": 2
+        },
+        "2026-09-25": {
+          "win": 1
+        },
+        "2026-09-26": {
+          "brand": 2
+        },
+        "2026-09-27": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-29": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-30": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-10-01": {
+          "done": 2,
+          "brand": 2
+        }
+      }
+    },
+    {
+      "id": "1022",
+      "display_name": "Aisha",
+      "avatar": null,
+      "points": 22,
+      "win_days": 6,
+      "done_days": 6,
+      "brand_days": 2,
+      "messages": 1,
+      "daily": {
+        "2026-09-23": {
+          "win": 1
+        },
+        "2026-09-24": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-25": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-28": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-29": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-30": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-10-01": {
+          "done": 2,
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1036",
+      "display_name": "Mila",
+      "avatar": null,
+      "points": 22,
+      "win_days": 4,
+      "done_days": 5,
+      "brand_days": 4,
+      "messages": 0,
+      "daily": {
+        "2026-09-23": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-24": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-26": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-27": {
+          "win": 1
+        },
+        "2026-09-28": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-29": {
+          "done": 2
+        },
+        "2026-09-30": {
+          "done": 2,
+          "brand": 2
+        }
+      }
+    },
+    {
+      "id": "1028",
+      "display_name": "Grace",
+      "avatar": null,
+      "points": 21,
+      "win_days": 5,
+      "done_days": 4,
+      "brand_days": 4,
+      "messages": 11,
+      "daily": {
+        "2026-09-23": {
+          "win": 1
+        },
+        "2026-09-24": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-25": {
+          "brand": 2
+        },
+        "2026-09-27": {
+          "win": 1
+        },
+        "2026-09-28": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-29": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-30": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-10-01": {
+          "win": 1,
+          "brand": 2
+        }
+      }
+    },
+    {
+      "id": "1025",
+      "display_name": "Sam",
+      "avatar": null,
+      "points": 20,
+      "win_days": 2,
+      "done_days": 6,
+      "brand_days": 3,
+      "messages": 33,
+      "daily": {
+        "2026-09-23": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-24": {
+          "done": 2
+        },
+        "2026-09-25": {
+          "done": 2
+        },
+        "2026-09-26": {
+          "brand": 2
+        },
+        "2026-09-27": {
+          "done": 2
+        },
+        "2026-09-28": {
+          "done": 2
+        },
+        "2026-09-29": {
+          "brand": 2
+        },
+        "2026-09-30": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-10-01": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1009",
+      "display_name": "Mateo",
+      "avatar": null,
+      "points": 20,
+      "win_days": 4,
+      "done_days": 5,
+      "brand_days": 3,
+      "messages": 10,
+      "daily": {
+        "2026-09-23": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-24": {
+          "done": 2
+        },
+        "2026-09-25": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-26": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-27": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-28": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-29": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1002",
+      "display_name": "Priya",
+      "avatar": null,
+      "points": 20,
+      "win_days": 8,
+      "done_days": 5,
+      "brand_days": 1,
+      "messages": 9,
+      "daily": {
+        "2026-09-23": {
+          "win": 1
+        },
+        "2026-09-24": {
+          "win": 1
+        },
+        "2026-09-25": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-26": {
+          "win": 1
+        },
+        "2026-09-27": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-28": {
+          "done": 2
+        },
+        "2026-09-29": {
+          "win": 1
+        },
+        "2026-09-30": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-10-01": {
+          "done": 2,
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1026",
+      "display_name": "Yuki",
+      "avatar": null,
+      "points": 19,
+      "win_days": 5,
+      "done_days": 6,
+      "brand_days": 1,
+      "messages": 23,
+      "daily": {
+        "2026-09-23": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-24": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-25": {
+          "done": 2
+        },
+        "2026-09-26": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-27": {
+          "done": 2
+        },
+        "2026-09-28": {
+          "done": 2
+        },
+        "2026-09-29": {
+          "win": 1
+        },
+        "2026-09-30": {
+          "done": 2
+        },
+        "2026-10-01": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1031",
+      "display_name": "Theo",
+      "avatar": null,
+      "points": 19,
+      "win_days": 3,
+      "done_days": 7,
+      "brand_days": 1,
+      "messages": 10,
+      "daily": {
+        "2026-09-23": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-24": {
+          "done": 2
+        },
+        "2026-09-25": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-27": {
+          "done": 2
+        },
+        "2026-09-28": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-29": {
+          "done": 2
+        },
+        "2026-09-30": {
+          "done": 2
+        },
+        "2026-10-01": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1019",
+      "display_name": "Ravi",
+      "avatar": null,
+      "points": 19,
+      "win_days": 5,
+      "done_days": 5,
+      "brand_days": 2,
+      "messages": 2,
+      "daily": {
+        "2026-09-23": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-24": {
+          "win": 1
+        },
+        "2026-09-25": {
+          "win": 1
+        },
+        "2026-09-26": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-27": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-29": {
+          "win": 1
+        },
+        "2026-09-30": {
+          "done": 2
+        },
+        "2026-10-01": {
+          "done": 2,
+          "brand": 2
+        }
+      }
+    },
+    {
+      "id": "1034",
+      "display_name": "Lena",
+      "avatar": null,
+      "points": 16,
+      "win_days": 4,
+      "done_days": 4,
+      "brand_days": 2,
+      "messages": 14,
+      "daily": {
+        "2026-09-23": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-24": {
+          "done": 2
+        },
+        "2026-09-25": {
+          "win": 1
+        },
+        "2026-09-27": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-28": {
+          "done": 2
+        },
+        "2026-09-29": {
+          "win": 1
+        },
+        "2026-09-30": {
+          "done": 2
+        },
+        "2026-10-01": {
+          "brand": 2
+        }
+      }
+    },
+    {
+      "id": "1001",
+      "display_name": "Marcus",
+      "avatar": null,
+      "points": 16,
+      "win_days": 2,
+      "done_days": 4,
+      "brand_days": 3,
+      "messages": 11,
+      "daily": {
+        "2026-09-23": {
+          "brand": 2
+        },
+        "2026-09-24": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-26": {
+          "done": 2
+        },
+        "2026-09-27": {
+          "win": 1
+        },
+        "2026-09-28": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-29": {
+          "brand": 2
+        },
+        "2026-10-01": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1012",
+      "display_name": "Leila",
+      "avatar": null,
+      "points": 16,
+      "win_days": 4,
+      "done_days": 4,
+      "brand_days": 2,
+      "messages": 0,
+      "daily": {
+        "2026-09-24": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-25": {
+          "done": 2
+        },
+        "2026-09-26": {
+          "win": 1
+        },
+        "2026-09-27": {
+          "win": 1
+        },
+        "2026-09-29": {
+          "win": 1
+        },
+        "2026-09-30": {
+          "done": 2
+        },
+        "2026-10-01": {
+          "done": 2,
+          "brand": 2
+        }
+      }
+    },
+    {
+      "id": "1003",
+      "display_name": "Jordan",
+      "avatar": null,
+      "points": 15,
+      "win_days": 3,
+      "done_days": 3,
+      "brand_days": 3,
+      "messages": 39,
+      "daily": {
+        "2026-09-23": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-25": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-26": {
+          "brand": 2
+        },
+        "2026-09-27": {
+          "brand": 2
+        },
+        "2026-09-28": {
+          "win": 1
+        },
+        "2026-09-29": {
+          "done": 2
+        },
+        "2026-09-30": {
+          "brand": 2
+        }
+      }
+    },
+    {
+      "id": "1008",
+      "display_name": "Zoe",
+      "avatar": null,
+      "points": 15,
+      "win_days": 3,
+      "done_days": 4,
+      "brand_days": 2,
+      "messages": 0,
+      "daily": {
+        "2026-09-23": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-26": {
+          "done": 2
+        },
+        "2026-09-28": {
+          "done": 2,
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-29": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-10-01": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1030",
+      "display_name": "Elena",
+      "avatar": null,
+      "points": 14,
+      "win_days": 2,
+      "done_days": 2,
+      "brand_days": 4,
+      "messages": 13,
+      "daily": {
+        "2026-09-23": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-25": {
+          "brand": 2
+        },
+        "2026-09-27": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-28": {
+          "brand": 2
+        },
+        "2026-09-30": {
+          "win": 1
+        },
+        "2026-10-01": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1005",
+      "display_name": "Kenji",
+      "avatar": null,
+      "points": 13,
+      "win_days": 3,
+      "done_days": 4,
+      "brand_days": 1,
+      "messages": 12,
+      "daily": {
+        "2026-09-23": {
+          "done": 2
+        },
+        "2026-09-25": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-26": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-28": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-10-01": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1020",
+      "display_name": "Maya",
+      "avatar": null,
+      "points": 13,
+      "win_days": 1,
+      "done_days": 3,
+      "brand_days": 3,
+      "messages": 0,
+      "daily": {
+        "2026-09-24": {
+          "brand": 2
+        },
+        "2026-09-27": {
+          "brand": 2
+        },
+        "2026-09-28": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-09-29": {
+          "done": 2
+        },
+        "2026-09-30": {
+          "done": 2,
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1014",
+      "display_name": "Hana",
+      "avatar": null,
+      "points": 11,
+      "win_days": 5,
+      "done_days": 2,
+      "brand_days": 1,
+      "messages": 11,
+      "daily": {
+        "2026-09-23": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-09-25": {
+          "win": 1
+        },
+        "2026-09-26": {
+          "win": 1
+        },
+        "2026-09-28": {
+          "done": 2
+        },
+        "2026-09-30": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-10-01": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1017",
+      "display_name": "Noah",
+      "avatar": null,
+      "points": 10,
+      "win_days": 2,
+      "done_days": 4,
+      "brand_days": 0,
+      "messages": 22,
+      "daily": {
+        "2026-09-24": {
+          "done": 2
+        },
+        "2026-09-26": {
+          "win": 1
+        },
+        "2026-09-28": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-30": {
+          "done": 2
+        },
+        "2026-10-01": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1032",
+      "display_name": "Rosa",
+      "avatar": null,
+      "points": 10,
+      "win_days": 2,
+      "done_days": 4,
+      "brand_days": 0,
+      "messages": 10,
+      "daily": {
+        "2026-09-23": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-09-24": {
+          "done": 2
+        },
+        "2026-09-27": {
+          "done": 2
+        },
+        "2026-09-28": {
+          "done": 2
+        },
+        "2026-09-30": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1013",
+      "display_name": "Omar",
+      "avatar": null,
+      "points": 10,
+      "win_days": 0,
+      "done_days": 3,
+      "brand_days": 2,
+      "messages": 1,
+      "daily": {
+        "2026-09-27": {
+          "done": 2
+        },
+        "2026-09-28": {
+          "brand": 2
+        },
+        "2026-09-29": {
+          "done": 2
+        },
+        "2026-09-30": {
+          "brand": 2
+        },
+        "2026-10-01": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1015",
+      "display_name": "Diego",
+      "avatar": null,
+      "points": 9,
+      "win_days": 3,
+      "done_days": 2,
+      "brand_days": 1,
+      "messages": 21,
+      "daily": {
+        "2026-09-23": {
+          "done": 2
+        },
+        "2026-09-24": {
+          "win": 1
+        },
+        "2026-09-26": {
+          "win": 1
+        },
+        "2026-09-27": {
+          "brand": 2
+        },
+        "2026-09-28": {
+          "win": 1
+        },
+        "2026-09-29": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1021",
+      "display_name": "Felix",
+      "avatar": null,
+      "points": 9,
+      "win_days": 1,
+      "done_days": 2,
+      "brand_days": 2,
+      "messages": 1,
+      "daily": {
+        "2026-09-23": {
+          "done": 2
+        },
+        "2026-09-25": {
+          "done": 2
+        },
+        "2026-09-27": {
+          "brand": 2
+        },
+        "2026-09-28": {
+          "brand": 2
+        },
+        "2026-09-29": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1016",
+      "display_name": "Ivy",
+      "avatar": null,
+      "points": 8,
+      "win_days": 0,
+      "done_days": 3,
+      "brand_days": 1,
+      "messages": 13,
+      "daily": {
+        "2026-09-23": {
+          "done": 2
+        },
+        "2026-09-25": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-10-01": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1018",
+      "display_name": "Chloe",
+      "avatar": null,
+      "points": 5,
+      "win_days": 1,
+      "done_days": 2,
+      "brand_days": 0,
+      "messages": 0,
+      "daily": {
+        "2026-09-23": {
+          "done": 2
+        },
+        "2026-09-25": {
+          "win": 1
+        },
+        "2026-09-28": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1037",
+      "display_name": "Jonah",
+      "avatar": null,
+      "points": 4,
+      "win_days": 0,
+      "done_days": 1,
+      "brand_days": 1,
+      "messages": 12,
+      "daily": {
+        "2026-09-23": {
+          "brand": 2
+        },
+        "2026-09-29": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1033",
+      "display_name": "Kai",
+      "avatar": null,
+      "points": 4,
+      "win_days": 2,
+      "done_days": 0,
+      "brand_days": 1,
+      "messages": 11,
+      "daily": {
+        "2026-09-23": {
+          "win": 1
+        },
+        "2026-09-24": {
+          "brand": 2
+        },
+        "2026-09-25": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1010",
+      "display_name": "Nia",
+      "avatar": null,
+      "points": 4,
+      "win_days": 2,
+      "done_days": 1,
+      "brand_days": 0,
+      "messages": 11,
+      "daily": {
+        "2026-09-24": {
+          "win": 1
+        },
+        "2026-09-28": {
+          "win": 1
+        },
+        "2026-09-29": {
+          "done": 2
+        }
+      }
+    },
+    {
+      "id": "1007",
+      "display_name": "Lucas",
+      "avatar": null,
+      "points": 3,
+      "win_days": 1,
+      "done_days": 1,
+      "brand_days": 0,
+      "messages": 20,
+      "daily": {
+        "2026-09-25": {
+          "done": 2
+        },
+        "2026-09-27": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1006",
+      "display_name": "Amara",
+      "avatar": null,
+      "points": 3,
+      "win_days": 1,
+      "done_days": 1,
+      "brand_days": 0,
+      "messages": 19,
+      "daily": {
+        "2026-09-23": {
+          "done": 2
+        },
+        "2026-09-28": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1024",
+      "display_name": "Tara",
+      "avatar": null,
+      "points": 3,
+      "win_days": 1,
+      "done_days": 0,
+      "brand_days": 1,
+      "messages": 1,
+      "daily": {
+        "2026-09-25": {
+          "brand": 2
+        },
+        "2026-09-28": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1035",
+      "display_name": "Andre",
+      "avatar": null,
+      "points": 0,
+      "win_days": 0,
+      "done_days": 0,
+      "brand_days": 0,
+      "messages": 33,
+      "daily": {}
+    },
+    {
+      "id": "1027",
+      "display_name": "Ben",
+      "avatar": null,
+      "points": 0,
+      "win_days": 0,
+      "done_days": 0,
+      "brand_days": 0,
+      "messages": 21,
+      "daily": {}
+    }
+  ],
+  "sample": true
+}

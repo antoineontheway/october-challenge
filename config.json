@@ -1,0 +1,25 @@
+{
+  "challenge_name": "October Challenge",
+  "community_name": "UGC Buildout",
+  "challenge_start": "2026-10-02",
+  "challenge_end": "2026-10-31",
+  "timezone": "America/Los_Angeles",
+  "student_role": "everyone",
+  "excluded_user_ids": [
+    "1323065660942848005",
+    "782058766148960277"
+  ],
+  "staff_user_ids": [
+    "1323065660942848005"
+  ],
+  "admin_user_id": "1323065660942848005",
+  "channels": {
+    "general": "1516539768559763489",
+    "wins": "1516540087666606231",
+    "content_review": "1516540316369555599",
+    "ugc_opportunities": "1516540154301382878",
+    "socials": "1516540208043262222",
+    "october_challenge": "1555266252950347856"
+  },
+  "max_pages_per_channel": 300
+}
