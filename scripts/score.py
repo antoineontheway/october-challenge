@@ -71,6 +71,11 @@ def validate(cfg):
         problems.append("student_role is not set")
     for key in ("excluded_user_ids", "staff_user_ids"):
         problems += [f"{key} entry '{u}' is not a user ID" for u in cfg.get(key, []) if not str(u).isdigit()]
+    for o in cfg.get("removed_points", []):
+        if o.get("category") not in ("win", "done", "brand") or not str(o.get("user_id", "")).isdigit() \
+                or len(str(o.get("day", ""))) != 10:
+            problems.append(f"removed_points entry needs user_id, day (YYYY-MM-DD) and category "
+                            f"win/done/brand: {o}")
     if problems:
         raise SystemExit("config.json needs fixing:\n  - " + "\n  - ".join(problems))
 

@@ -68,10 +68,13 @@ def files(board, admin):
         ("standings.csv", _csv(standings, ["rank_points", "student", "user_id", "points", "win_days",
                                            "done_days", "brand_days", "messages", "pitches",
                                            "applications", "videos"])),
-        ("links.csv", _csv(admin["links"], ["day", "student", "user_id", "links", "message"])),
+        ("links.csv", _csv(admin["links"], ["day", "student", "user_id", "links", "message", "removed"])),
         ("activity.csv", _csv(admin["activity"], ["day", "student", "user_id", "pitches",
                                                   "applications", "videos", "link"])),
     ]
+    out.append(("done_posts.csv", _csv(admin.get("done_posts", []),
+                ["day", "student", "user_id", "pitches", "applications", "videos", "numbers_counted",
+                 "text", "link"])))
     if admin["unrecognized_links"]:
         out.append(("unrecognized_links.csv",
                     _csv(admin["unrecognized_links"], ["day", "student", "user_id", "links", "message"])))

@@ -38,11 +38,16 @@ SOCIAL_DOMAINS = (
     "bsky.app", "twitch.tv",
 )
 
-ACTIVITY_PATTERNS = {
-    "pitches": r"pitch(?:es|ed)?",
-    "applications": r"app(?:lication)?s?",
-    "videos": r"vid(?:eo)?s?",
+ACTIVITY_WORDS = {
+    "pitches": re.compile(r"^pitch(?:es|ed|ing)?$"),
+    "applications": re.compile(r"^(?:apps?|applications?|applied|apply|applies)$"),
+    "videos": re.compile(r"^(?:videos?|vids?)$"),
 }
+NUMBER_WORDS = {w: i for i, w in enumerate(
+    "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen "
+    "sixteen seventeen eighteen nineteen twenty".split())}
+# Separators between items: "3 videos, 5 applications + 2 pitches" -> three segments.
+SEGMENT_SPLIT = re.compile(r"[,;+|/•\n]|\band\b|&", re.I)
 
 
 # ---------------------------------------------------------------- text checks
@@ -71,13 +76,28 @@ def is_done(content):
 
 
 def parse_activity(content):
-    """'Done ✅ 5 pitches, 3 applications, 2 videos' -> {'pitches': 5, ...}. Missing keys omitted."""
+    """'Done 3 trybe videos, 5 applications + 2 pitches' -> {'videos': 3, 'applications': 5, 'pitches': 2}.
+
+    Each item word takes the nearest unused number in its segment, allowing a couple of words in
+    between ("1 brand video", "Pitches sent: 10"). Missing keys are omitted.
+    """
+    text = (content or "").replace("\ufe0f", "").replace("\u20e3", "")  # 5️⃣ -> 5
     found = {}
-    for key, pat in ACTIVITY_PATTERNS.items():
-        m = (re.search(rf"(\d+)\s*(?:x\s*)?(?:{pat})\b", content, re.I)
-             or re.search(rf"\b(?:{pat})\s*[:=\-]?\s*(\d+)\b", content, re.I))
-        if m:
-            found[key] = int(m.group(1))
+    for segment in SEGMENT_SPLIT.split(text):
+        tokens = re.findall(r"\d+|[^\W\d_]+", segment.lower())
+        nums = {i: int(t) if t.isdigit() else NUMBER_WORDS[t]
+                for i, t in enumerate(tokens) if t.isdigit() or t in NUMBER_WORDS}
+        used = set()
+        for i, tok in enumerate(tokens):
+            key = next((k for k, rx in ACTIVITY_WORDS.items() if rx.match(tok)), None)
+            if key is None or key in found:
+                continue
+            # Closest first; "5 pitches" (before) wins over "pitches 5" (after) at equal distance.
+            for j in (i - 1, i + 1, i - 2, i + 2, i - 3):
+                if j in nums and j not in used:
+                    found[key] = nums[j]
+                    used.add(j)
+                    break
     return found
 
 
@@ -107,7 +127,7 @@ def compute(students, messages, cfg, now):
     staff = set(cfg.get("staff_user_ids", []))  # replies to their posts count like replies to students
     state = {sid: {"daily": {}, "messages": 0, "activity": Counter(), "activity_days": set()}
              for sid in students}
-    links, activity_rows, unrecognized = [], [], []
+    links, activity_rows, unrecognized, done_posts = [], [], [], []
 
     for m in sorted(messages, key=lambda m: int(m["id"])):
         sid, ch, day = m["author"], m["channel"], m["day"]
@@ -123,10 +143,15 @@ def compute(students, messages, cfg, now):
         elif ch == "october_challenge" and is_done(m["content"]):
             day_pts.setdefault("done", POINTS["done"])
             nums = parse_activity(m["content"])
-            if nums and day not in s["activity_days"]:  # one breakdown per day, first one with numbers
+            counted = bool(nums) and day not in s["activity_days"]  # first post of the day with numbers
+            if counted:
                 s["activity_days"].add(day)
                 s["activity"].update(nums)
                 activity_rows.append({"student": name, "user_id": sid, "day": day, **nums, "link": m["jump"]})
+            done_posts.append({"day": day, "student": name, "user_id": sid, **nums,
+                               "numbers_counted": "yes" if counted else ("no numbers found" if not nums
+                                                                          else "no, already counted today"),
+                               "text": m["content"][:500], "link": m["jump"]})
         elif ch == "socials" and m["top_level"]:
             social, other = classify_links(m["content"])
             if social and "brand" not in day_pts:
@@ -149,6 +174,16 @@ def compute(students, messages, cfg, now):
             counts = False
         if counts:
             s["messages"] += 1
+
+    # Manual rulings: points Antoine reviewed and removed (e.g. a UGC video posted as a brand post).
+    for o in cfg.get("removed_points", []):
+        day_pts = state.get(o["user_id"], {}).get("daily", {}).get(o["day"])
+        if day_pts and day_pts.pop(o["category"], None) is not None:
+            for row in links:
+                if o["category"] == "brand" and row["user_id"] == o["user_id"] and row["day"] == o["day"]:
+                    row["removed"] = o.get("note", "removed by admin")
+            if not day_pts:
+                del state[o["user_id"]]["daily"][o["day"]]
 
     rows = []
     for sid, s in state.items():
@@ -194,6 +229,7 @@ def compute(students, messages, cfg, now):
         "links": links,
         "unrecognized_links": unrecognized,
         "activity": activity_rows,
+        "done_posts": done_posts,
         "member_activity": {sid: dict(s["activity"]) for sid, s in state.items()},
     }
     return board, admin
