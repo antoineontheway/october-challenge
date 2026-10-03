@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T22:44:53Z",
+  "generated_at": "2026-10-03T22:50:09Z",
   "challenge_name": "October Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-10-02",
@@ -9,19 +9,20 @@
   "max_points_per_day": 5,
   "totals": {
     "students": 18,
-    "points": 37,
+    "points": 35,
     "messages": 44,
     "pitches": 62,
     "applications": 5,
-    "videos": 0
+    "videos": 4
   },
   "standings": {
     "most_consistent": {
       "leaders": [
-        "1288380188186644552"
+        "614274180552196098",
+        "750036813523189782"
       ],
-      "score": 6,
-      "tie": false
+      "score": 5,
+      "tie": true
     },
     "most_active": {
       "leaders": [
@@ -30,31 +31,12 @@
       "score": 10,
       "tie": false,
       "ineligible": [
-        "1288380188186644552"
+        "614274180552196098",
+        "750036813523189782"
       ]
     }
   },
   "members": [
-    {
-      "id": "1288380188186644552",
-      "display_name": "Everest/Ryan",
-      "avatar": "d85a56c15a05a7de616788d5e88ff183",
-      "points": 6,
-      "win_days": 2,
-      "done_days": 1,
-      "brand_days": 1,
-      "messages": 4,
-      "daily": {
-        "2026-10-02": {
-          "win": 1,
-          "brand": 2,
-          "done": 2
-        },
-        "2026-10-03": {
-          "win": 1
-        }
-      }
-    },
     {
       "id": "614274180552196098",
       "display_name": "meli",
@@ -84,6 +66,25 @@
       "daily": {
         "2026-10-02": {
           "brand": 2,
+          "done": 2
+        },
+        "2026-10-03": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "1288380188186644552",
+      "display_name": "Everest/Ryan",
+      "avatar": "d85a56c15a05a7de616788d5e88ff183",
+      "points": 4,
+      "win_days": 2,
+      "done_days": 1,
+      "brand_days": 0,
+      "messages": 4,
+      "daily": {
+        "2026-10-02": {
+          "win": 1,
           "done": 2
         },
         "2026-10-03": {
