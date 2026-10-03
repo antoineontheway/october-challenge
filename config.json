@@ -13,6 +13,14 @@
     "1323065660942848005"
   ],
   "admin_user_id": "1323065660942848005",
+  "removed_points": [
+    {
+      "user_id": "1288380188186644552",
+      "day": "2026-10-02",
+      "category": "brand",
+      "note": "Everest/Ryan: UGC video, not a personal brand post"
+    }
+  ],
   "channels": {
     "general": "1516539768559763489",
     "wins": "1516540087666606231",
