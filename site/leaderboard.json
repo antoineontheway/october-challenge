@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T08:15:28Z",
+  "generated_at": "2026-10-07T08:16:25Z",
   "challenge_name": "October Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-10-02",
@@ -9,25 +9,25 @@
   "max_points_per_day": 5,
   "totals": {
     "students": 20,
-    "points": 101,
-    "messages": 146,
-    "pitches": 214,
+    "points": 132,
+    "messages": 197,
+    "pitches": 279,
     "applications": 16,
-    "videos": 23
+    "videos": 25
   },
   "standings": {
     "most_consistent": {
       "leaders": [
         "750036813523189782"
       ],
-      "score": 15,
+      "score": 20,
       "tie": false
     },
     "most_active": {
       "leaders": [
-        "1348508829679227002"
+        "419739053722828800"
       ],
-      "score": 21,
+      "score": 30,
       "tie": false,
       "ineligible": [
         "750036813523189782"
@@ -39,11 +39,11 @@
       "id": "750036813523189782",
       "display_name": "Jason LindzTryz",
       "avatar": "deccfb9bbe4007c678e33bb66e811f0e",
-      "points": 15,
-      "win_days": 3,
-      "done_days": 4,
-      "brand_days": 2,
-      "messages": 27,
+      "points": 20,
+      "win_days": 4,
+      "done_days": 5,
+      "brand_days": 3,
+      "messages": 37,
       "daily": {
         "2026-10-02": {
           "brand": 2,
@@ -61,6 +61,11 @@
         "2026-10-05": {
           "win": 1,
           "done": 2
+        },
+        "2026-10-06": {
+          "win": 1,
+          "done": 2,
+          "brand": 2
         }
       }
     },
@@ -68,11 +73,11 @@
       "id": "614274180552196098",
       "display_name": "meli",
       "avatar": "9c1cd91921c4752bc6ed14b738d989ed",
-      "points": 14,
-      "win_days": 4,
+      "points": 15,
+      "win_days": 5,
       "done_days": 3,
       "brand_days": 2,
-      "messages": 16,
+      "messages": 18,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -90,6 +95,9 @@
         "2026-10-05": {
           "win": 1,
           "done": 2
+        },
+        "2026-10-06": {
+          "win": 1
         }
       }
     },
@@ -97,10 +105,10 @@
       "id": "665792610379759627",
       "display_name": "Niandra",
       "avatar": "dc1e9451a80877601cc172782898cfcc",
-      "points": 11,
-      "win_days": 3,
+      "points": 14,
+      "win_days": 4,
       "done_days": 1,
-      "brand_days": 3,
+      "brand_days": 4,
       "messages": 14,
       "daily": {
         "2026-10-02": {
@@ -115,6 +123,10 @@
         "2026-10-05": {
           "brand": 2,
           "win": 1
+        },
+        "2026-10-06": {
+          "win": 1,
+          "brand": 2
         }
       }
     },
@@ -122,11 +134,11 @@
       "id": "82546303300546560",
       "display_name": "Andy Do",
       "avatar": "39df8942d700a6a81d9ab2c98ed69da2",
-      "points": 9,
+      "points": 13,
       "win_days": 1,
-      "done_days": 0,
-      "brand_days": 4,
-      "messages": 9,
+      "done_days": 1,
+      "brand_days": 5,
+      "messages": 17,
       "daily": {
         "2026-10-02": {
           "brand": 2
@@ -140,6 +152,10 @@
         },
         "2026-10-05": {
           "brand": 2
+        },
+        "2026-10-06": {
+          "brand": 2,
+          "done": 2
         }
       }
     },
@@ -147,11 +163,11 @@
       "id": "1288380188186644552",
       "display_name": "Everest/Ryan",
       "avatar": "d85a56c15a05a7de616788d5e88ff183",
-      "points": 9,
+      "points": 11,
       "win_days": 3,
-      "done_days": 3,
+      "done_days": 4,
       "brand_days": 0,
-      "messages": 7,
+      "messages": 9,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -165,6 +181,9 @@
           "done": 2
         },
         "2026-10-05": {
+          "done": 2
+        },
+        "2026-10-06": {
           "done": 2
         }
       }
@@ -173,11 +192,11 @@
       "id": "1318454890103570483",
       "display_name": "Josiah",
       "avatar": "652dd5813aa997598daba9b6e6d450bf",
-      "points": 9,
+      "points": 11,
       "win_days": 3,
-      "done_days": 3,
+      "done_days": 4,
       "brand_days": 0,
-      "messages": 4,
+      "messages": 5,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -192,6 +211,9 @@
         },
         "2026-10-05": {
           "done": 2
+        },
+        "2026-10-07": {
+          "done": 2
         }
       }
     },
@@ -199,11 +221,11 @@
       "id": "1348508829679227002",
       "display_name": "Tammy Nguyễn",
       "avatar": "960befca83b815aaec1930a7d5df1ae6",
-      "points": 7,
-      "win_days": 1,
-      "done_days": 1,
+      "points": 10,
+      "win_days": 2,
+      "done_days": 2,
       "brand_days": 2,
-      "messages": 21,
+      "messages": 29,
       "daily": {
         "2026-10-02": {
           "brand": 2
@@ -214,6 +236,10 @@
         },
         "2026-10-04": {
           "done": 2
+        },
+        "2026-10-06": {
+          "win": 1,
+          "done": 2
         }
       }
     },
@@ -221,11 +247,11 @@
       "id": "1524924968188641290",
       "display_name": "Elizabeth",
       "avatar": "a6ed3ac579c0c042f92bb6d608aa67dc",
-      "points": 7,
-      "win_days": 3,
-      "done_days": 2,
+      "points": 10,
+      "win_days": 4,
+      "done_days": 3,
       "brand_days": 0,
-      "messages": 11,
+      "messages": 17,
       "daily": {
         "2026-10-02": {
           "done": 2,
@@ -235,6 +261,10 @@
           "win": 1
         },
         "2026-10-05": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-10-06": {
           "done": 2,
           "win": 1
         }
@@ -244,11 +274,11 @@
       "id": "419739053722828800",
       "display_name": "viseth",
       "avatar": "a1eb417f5204122c39a925c349d2db2e",
-      "points": 6,
+      "points": 8,
       "win_days": 4,
       "done_days": 0,
-      "brand_days": 1,
-      "messages": 19,
+      "brand_days": 2,
+      "messages": 30,
       "daily": {
         "2026-10-02": {
           "brand": 2,
@@ -262,6 +292,9 @@
         },
         "2026-10-05": {
           "win": 1
+        },
+        "2026-10-06": {
+          "brand": 2
         }
       }
     },
@@ -269,9 +302,9 @@
       "id": "1513284857390698557",
       "display_name": "Andres",
       "avatar": "f3a09e4b57c5642070b56b4d44914581",
-      "points": 4,
+      "points": 6,
       "win_days": 0,
-      "done_days": 2,
+      "done_days": 3,
       "brand_days": 0,
       "messages": 1,
       "daily": {
@@ -280,6 +313,9 @@
         },
         "2026-10-05": {
           "done": 2
+        },
+        "2026-10-06": {
+          "done": 2
         }
       }
     },
@@ -287,10 +323,10 @@
       "id": "606065912847532044",
       "display_name": "adrian",
       "avatar": "03cd2f9825143e218a54d02ead909d4e",
-      "points": 4,
+      "points": 6,
       "win_days": 2,
       "done_days": 0,
-      "brand_days": 1,
+      "brand_days": 2,
       "messages": 0,
       "daily": {
         "2026-10-02": {
@@ -300,6 +336,28 @@
           "brand": 2
         },
         "2026-10-05": {
+          "win": 1
+        },
+        "2026-10-06": {
+          "brand": 2
+        }
+      }
+    },
+    {
+      "id": "702726752232931328",
+      "display_name": "Theo | @rts_theo",
+      "avatar": "b43b3b6106cc3b27e53f196c154e431c",
+      "points": 4,
+      "win_days": 2,
+      "done_days": 0,
+      "brand_days": 1,
+      "messages": 3,
+      "daily": {
+        "2026-10-05": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-10-06": {
           "win": 1
         }
       }
@@ -312,7 +370,7 @@
       "win_days": 3,
       "done_days": 0,
       "brand_days": 0,
-      "messages": 9,
+      "messages": 10,
       "daily": {
         "2026-10-02": {
           "win": 1
@@ -326,18 +384,17 @@
       }
     },
     {
-      "id": "702726752232931328",
-      "display_name": "Theo | @rts_theo",
-      "avatar": "b43b3b6106cc3b27e53f196c154e431c",
-      "points": 3,
+      "id": "434557217132380167",
+      "display_name": "Pasc",
+      "avatar": "66223a59a29b97da97733f61d9854524",
+      "points": 1,
       "win_days": 1,
       "done_days": 0,
-      "brand_days": 1,
+      "brand_days": 0,
       "messages": 2,
       "daily": {
-        "2026-10-05": {
-          "win": 1,
-          "brand": 2
+        "2026-10-06": {
+          "win": 1
         }
       }
     },
@@ -361,17 +418,6 @@
       "done_days": 0,
       "brand_days": 0,
       "messages": 2,
-      "daily": {}
-    },
-    {
-      "id": "434557217132380167",
-      "display_name": "Pasc",
-      "avatar": "66223a59a29b97da97733f61d9854524",
-      "points": 0,
-      "win_days": 0,
-      "done_days": 0,
-      "brand_days": 0,
-      "messages": 1,
       "daily": {}
     },
     {
