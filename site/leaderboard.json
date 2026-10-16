@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T05:55:33Z",
+  "generated_at": "2026-10-16T08:27:00Z",
   "challenge_name": "October Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-10-02",
@@ -15,9 +15,9 @@
   ],
   "totals": {
     "students": 25,
-    "points": 316,
-    "messages": 579,
-    "pitches": 587,
+    "points": 318,
+    "messages": 581,
+    "pitches": 597,
     "applications": 48,
     "videos": 33
   },
@@ -33,7 +33,7 @@
       "leaders": [
         "1348508829679227002"
       ],
-      "score": 91,
+      "score": 92,
       "tie": false,
       "ineligible": [
         "750036813523189782"
@@ -231,6 +231,67 @@
       }
     },
     {
+      "id": "1288380188186644552",
+      "display_name": "Everest/Ryan",
+      "avatar": "d85a56c15a05a7de616788d5e88ff183",
+      "points": 36,
+      "win_days": 10,
+      "done_days": 12,
+      "brand_days": 1,
+      "messages": 31,
+      "daily": {
+        "2026-10-02": {
+          "win": 1,
+          "done": 2
+        },
+        "2026-10-03": {
+          "win": 1
+        },
+        "2026-10-04": {
+          "win": 1,
+          "done": 2
+        },
+        "2026-10-05": {
+          "done": 2
+        },
+        "2026-10-06": {
+          "done": 2
+        },
+        "2026-10-07": {
+          "win": 1,
+          "brand": 2,
+          "done": 2
+        },
+        "2026-10-08": {
+          "win": 1,
+          "done": 2
+        },
+        "2026-10-10": {
+          "done": 2,
+          "win": 1
+        },
+        "2026-10-11": {
+          "win": 1,
+          "done": 2
+        },
+        "2026-10-12": {
+          "done": 2
+        },
+        "2026-10-13": {
+          "win": 1,
+          "done": 2
+        },
+        "2026-10-14": {
+          "win": 1,
+          "done": 2
+        },
+        "2026-10-15": {
+          "win": 1,
+          "done": 2
+        }
+      }
+    },
+    {
       "id": "665792610379759627",
       "display_name": "Niandra",
       "avatar": "dc1e9451a80877601cc172782898cfcc",
@@ -283,66 +344,6 @@
         "2026-10-14": {
           "win": 1,
           "brand": 2
-        }
-      }
-    },
-    {
-      "id": "1288380188186644552",
-      "display_name": "Everest/Ryan",
-      "avatar": "d85a56c15a05a7de616788d5e88ff183",
-      "points": 34,
-      "win_days": 10,
-      "done_days": 11,
-      "brand_days": 1,
-      "messages": 30,
-      "daily": {
-        "2026-10-02": {
-          "win": 1,
-          "done": 2
-        },
-        "2026-10-03": {
-          "win": 1
-        },
-        "2026-10-04": {
-          "win": 1,
-          "done": 2
-        },
-        "2026-10-05": {
-          "done": 2
-        },
-        "2026-10-06": {
-          "done": 2
-        },
-        "2026-10-07": {
-          "win": 1,
-          "brand": 2,
-          "done": 2
-        },
-        "2026-10-08": {
-          "win": 1,
-          "done": 2
-        },
-        "2026-10-10": {
-          "done": 2,
-          "win": 1
-        },
-        "2026-10-11": {
-          "win": 1,
-          "done": 2
-        },
-        "2026-10-12": {
-          "done": 2
-        },
-        "2026-10-13": {
-          "win": 1,
-          "done": 2
-        },
-        "2026-10-14": {
-          "win": 1,
-          "done": 2
-        },
-        "2026-10-15": {
-          "win": 1
         }
       }
     },
@@ -440,7 +441,7 @@
       "win_days": 5,
       "done_days": 4,
       "brand_days": 2,
-      "messages": 91,
+      "messages": 92,
       "daily": {
         "2026-10-02": {
           "brand": 2
