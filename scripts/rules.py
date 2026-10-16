@@ -15,7 +15,9 @@ from datetime import timezone
 from urllib.parse import urlparse
 
 POINTS = {"win": 1, "done": 2, "brand": 2}
-OPEN_CHANNELS = {"general", "content_review", "ugc_opportunities"}
+# Channels where every qualifying message counts for Most Active. config.json can override this
+# with "most_active_channels" (channel keys from "channels").
+OPEN_CHANNELS = ["general", "content_review", "ugc_opportunities"]
 REPLY_ONLY_CHANNELS = {"wins", "socials"}
 
 CUSTOM_EMOJI = re.compile(r"<a?:\w+:\d+>")
@@ -124,7 +126,8 @@ def compute(students, messages, cfg, now):
     Returns (public_board, admin_details).
     """
     start, end = cfg["challenge_start"], cfg["challenge_end"]
-    staff = set(cfg.get("staff_user_ids", []))  # replies to their posts count like replies to students
+    staff = set(cfg.get("staff_user_ids", []))
+    open_channels = cfg.get("most_active_channels", OPEN_CHANNELS)  # replies to their posts count like replies to students
     state = {sid: {"daily": {}, "messages": 0, "activity": Counter(), "activity_days": set()}
              for sid in students}
     links, activity_rows, unrecognized, done_posts = [], [], [], []
@@ -165,7 +168,7 @@ def compute(students, messages, cfg, now):
             s["daily"][day] = day_pts
 
         # Prize 2
-        if ch in OPEN_CHANNELS:
+        if ch in open_channels:
             counts = qualifies(m["content"])
         elif ch in REPLY_ONLY_CHANNELS:
             to_other = lambda uid: uid is not None and uid != sid and (uid in students or uid in staff)  # noqa: E731
@@ -214,6 +217,7 @@ def compute(students, messages, cfg, now):
         "timezone": cfg["timezone"],
         "final": now.date().isoformat() > end,
         "max_points_per_day": sum(POINTS.values()),
+        "most_active_channels": list(open_channels),
         "totals": {
             "students": len(rows),
             "points": sum(r["points"] for r in rows),
