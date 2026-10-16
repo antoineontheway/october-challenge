@@ -212,7 +212,7 @@ footer { margin-top: 24px; font-size: 0.875rem; color: var(--muted); }
     <div>
       <h2>Most Active: be part of the conversation</h2>
       <ul>
-        <li><span class="pts">+1</span><span>Every message in <span class="chan">#general</span>, <span class="chan">#content-review</span> or <span class="chan">#ugc-opportunities</span>.</span></li>
+        <li><span class="pts">+1</span><span id="open-channels">Every message in <span class="chan">#general</span>, <span class="chan">#content-review</span> or <span class="chan">#ugc-opportunities</span>.</span></li>
         <li><span class="pts">+1</span><span>Every reply to another student’s post, or to Antoine’s, in <span class="chan">#wins</span> or <span class="chan">#share-your-socials</span>, including in its thread.</span></li>
       </ul>
       <p class="fine">Messages need at least 3 words, not counting emoji. “gm”, “lol”, stickers and GIFs don’t count. Deleted messages lose their points. Each student can win one prize.</p>
@@ -291,6 +291,13 @@ footer { margin-top: 24px; font-size: 0.875rem; color: var(--muted); }
     $("together").innerHTML = `Together we’ve sent <span class="num">${t.pitches.toLocaleString()}</span> pitches, ` +
       `<span class="num">${t.applications.toLocaleString()}</span> applications and ` +
       `<span class="num">${t.videos.toLocaleString()}</span> videos.`;
+
+    // Most Active channel list comes from config, so adding a channel needs no page edit
+    const openCh = (data.most_active_channels || []).map((k) => `<span class="chan">#${esc(k.replace(/_/g, "-"))}</span>`);
+    if (openCh.length) {
+      $("open-channels").innerHTML = "Every message in " +
+        (openCh.length > 1 ? openCh.slice(0, -1).join(", ") + " or " + openCh[openCh.length - 1] : openCh[0]) + ".";
+    }
 
     // Daily community points
     const perDay = Object.fromEntries(days.map((d) => [d, 0]));
