@@ -27,7 +27,14 @@
     "content_review": "1516540316369555599",
     "ugc_opportunities": "1516540154301382878",
     "socials": "1516540208043262222",
-    "october_challenge": "1555266252950347856"
+    "october_challenge": "1555266252950347856",
+    "tips_and_tricks": "1556771438222901268"
   },
+  "most_active_channels": [
+    "general",
+    "content_review",
+    "ugc_opportunities",
+    "tips_and_tricks"
+  ],
   "max_pages_per_channel": 300
 }
