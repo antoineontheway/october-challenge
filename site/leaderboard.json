@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T08:21:46Z",
+  "generated_at": "2026-10-19T08:35:16Z",
   "challenge_name": "October Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-10-02",
@@ -15,9 +15,9 @@
   ],
   "totals": {
     "students": 25,
-    "points": 344,
-    "messages": 603,
-    "pitches": 642,
+    "points": 348,
+    "messages": 609,
+    "pitches": 652,
     "applications": 53,
     "videos": 33
   },
@@ -33,7 +33,7 @@
       "leaders": [
         "1348508829679227002"
       ],
-      "score": 96,
+      "score": 97,
       "tie": false,
       "ineligible": [
         "750036813523189782"
@@ -49,7 +49,7 @@
       "win_days": 13,
       "done_days": 14,
       "brand_days": 8,
-      "messages": 114,
+      "messages": 117,
       "daily": {
         "2026-10-02": {
           "brand": 2,
@@ -192,7 +192,7 @@
       "win_days": 10,
       "done_days": 13,
       "brand_days": 2,
-      "messages": 32,
+      "messages": 33,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -255,8 +255,8 @@
       "id": "1524924968188641290",
       "display_name": "Elizabeth",
       "avatar": "a6ed3ac579c0c042f92bb6d608aa67dc",
-      "points": 38,
-      "win_days": 12,
+      "points": 39,
+      "win_days": 13,
       "done_days": 8,
       "brand_days": 5,
       "messages": 53,
@@ -311,6 +311,9 @@
         },
         "2026-10-16": {
           "brand": 2
+        },
+        "2026-10-18": {
+          "win": 1
         }
       }
     },
@@ -374,9 +377,9 @@
       "id": "1513284857390698557",
       "display_name": "Andres",
       "avatar": "f3a09e4b57c5642070b56b4d44914581",
-      "points": 24,
+      "points": 26,
       "win_days": 0,
-      "done_days": 11,
+      "done_days": 12,
       "brand_days": 1,
       "messages": 1,
       "daily": {
@@ -413,6 +416,9 @@
         "2026-10-17": {
           "brand": 2,
           "done": 2
+        },
+        "2026-10-18": {
+          "done": 2
         }
       }
     },
@@ -420,11 +426,11 @@
       "id": "614274180552196098",
       "display_name": "meli",
       "avatar": "9c1cd91921c4752bc6ed14b738d989ed",
-      "points": 22,
-      "win_days": 10,
+      "points": 23,
+      "win_days": 11,
       "done_days": 3,
       "brand_days": 3,
-      "messages": 37,
+      "messages": 38,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -461,6 +467,9 @@
         "2026-10-16": {
           "brand": 2,
           "win": 1
+        },
+        "2026-10-18": {
+          "win": 1
         }
       }
     },
@@ -472,7 +481,7 @@
       "win_days": 5,
       "done_days": 4,
       "brand_days": 2,
-      "messages": 96,
+      "messages": 97,
       "daily": {
         "2026-10-02": {
           "brand": 2
