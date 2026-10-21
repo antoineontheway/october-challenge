@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T08:29:21Z",
+  "generated_at": "2026-10-21T08:30:54Z",
   "challenge_name": "October Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-10-02",
@@ -15,10 +15,10 @@
   ],
   "totals": {
     "students": 25,
-    "points": 368,
-    "messages": 642,
-    "pitches": 695,
-    "applications": 55,
+    "points": 381,
+    "messages": 671,
+    "pitches": 708,
+    "applications": 57,
     "videos": 33
   },
   "standings": {
@@ -26,14 +26,14 @@
       "leaders": [
         "750036813523189782"
       ],
-      "score": 62,
+      "score": 63,
       "tie": false
     },
     "most_active": {
       "leaders": [
         "1348508829679227002"
       ],
-      "score": 101,
+      "score": 102,
       "tie": false,
       "ineligible": [
         "750036813523189782"
@@ -45,11 +45,11 @@
       "id": "750036813523189782",
       "display_name": "Jason LindzTryz",
       "avatar": "deccfb9bbe4007c678e33bb66e811f0e",
-      "points": 62,
-      "win_days": 14,
+      "points": 63,
+      "win_days": 15,
       "done_days": 15,
       "brand_days": 9,
-      "messages": 122,
+      "messages": 125,
       "daily": {
         "2026-10-02": {
           "brand": 2,
@@ -122,73 +122,8 @@
           "win": 1,
           "done": 2,
           "brand": 2
-        }
-      }
-    },
-    {
-      "id": "82546303300546560",
-      "display_name": "Andy Do",
-      "avatar": "39df8942d700a6a81d9ab2c98ed69da2",
-      "points": 43,
-      "win_days": 5,
-      "done_days": 3,
-      "brand_days": 16,
-      "messages": 39,
-      "daily": {
-        "2026-10-02": {
-          "brand": 2
         },
-        "2026-10-03": {
-          "win": 1,
-          "brand": 2
-        },
-        "2026-10-04": {
-          "brand": 2
-        },
-        "2026-10-05": {
-          "brand": 2
-        },
-        "2026-10-06": {
-          "brand": 2,
-          "done": 2
-        },
-        "2026-10-07": {
-          "brand": 2,
-          "done": 2,
-          "win": 1
-        },
-        "2026-10-08": {
-          "win": 1,
-          "brand": 2
-        },
-        "2026-10-09": {
-          "done": 2,
-          "brand": 2
-        },
-        "2026-10-10": {
-          "brand": 2
-        },
-        "2026-10-12": {
-          "brand": 2,
-          "win": 1
-        },
-        "2026-10-13": {
-          "brand": 2
-        },
-        "2026-10-14": {
-          "brand": 2
-        },
-        "2026-10-15": {
-          "brand": 2
-        },
-        "2026-10-16": {
-          "brand": 2
-        },
-        "2026-10-17": {
-          "brand": 2
-        },
-        "2026-10-19": {
-          "brand": 2,
+        "2026-10-20": {
           "win": 1
         }
       }
@@ -197,11 +132,11 @@
       "id": "1524924968188641290",
       "display_name": "Elizabeth",
       "avatar": "a6ed3ac579c0c042f92bb6d608aa67dc",
-      "points": 42,
-      "win_days": 14,
-      "done_days": 9,
-      "brand_days": 5,
-      "messages": 58,
+      "points": 47,
+      "win_days": 15,
+      "done_days": 10,
+      "brand_days": 6,
+      "messages": 61,
       "daily": {
         "2026-10-02": {
           "done": 2,
@@ -260,6 +195,82 @@
         "2026-10-19": {
           "done": 2,
           "win": 1
+        },
+        "2026-10-20": {
+          "done": 2,
+          "brand": 2,
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "82546303300546560",
+      "display_name": "Andy Do",
+      "avatar": "39df8942d700a6a81d9ab2c98ed69da2",
+      "points": 45,
+      "win_days": 5,
+      "done_days": 3,
+      "brand_days": 17,
+      "messages": 41,
+      "daily": {
+        "2026-10-02": {
+          "brand": 2
+        },
+        "2026-10-03": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-10-04": {
+          "brand": 2
+        },
+        "2026-10-05": {
+          "brand": 2
+        },
+        "2026-10-06": {
+          "brand": 2,
+          "done": 2
+        },
+        "2026-10-07": {
+          "brand": 2,
+          "done": 2,
+          "win": 1
+        },
+        "2026-10-08": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-10-09": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-10-10": {
+          "brand": 2
+        },
+        "2026-10-12": {
+          "brand": 2,
+          "win": 1
+        },
+        "2026-10-13": {
+          "brand": 2
+        },
+        "2026-10-14": {
+          "brand": 2
+        },
+        "2026-10-15": {
+          "brand": 2
+        },
+        "2026-10-16": {
+          "brand": 2
+        },
+        "2026-10-17": {
+          "brand": 2
+        },
+        "2026-10-19": {
+          "brand": 2,
+          "win": 1
+        },
+        "2026-10-20": {
+          "brand": 2
         }
       }
     },
@@ -267,11 +278,11 @@
       "id": "1288380188186644552",
       "display_name": "Everest/Ryan",
       "avatar": "d85a56c15a05a7de616788d5e88ff183",
-      "points": 42,
-      "win_days": 10,
+      "points": 43,
+      "win_days": 11,
       "done_days": 14,
       "brand_days": 2,
-      "messages": 37,
+      "messages": 39,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -330,6 +341,9 @@
         },
         "2026-10-19": {
           "done": 2
+        },
+        "2026-10-20": {
+          "win": 1
         }
       }
     },
@@ -341,7 +355,7 @@
       "win_days": 10,
       "done_days": 1,
       "brand_days": 11,
-      "messages": 75,
+      "messages": 80,
       "daily": {
         "2026-10-02": {
           "brand": 2,
@@ -445,11 +459,11 @@
       "id": "614274180552196098",
       "display_name": "meli",
       "avatar": "9c1cd91921c4752bc6ed14b738d989ed",
-      "points": 23,
-      "win_days": 11,
+      "points": 24,
+      "win_days": 12,
       "done_days": 3,
       "brand_days": 3,
-      "messages": 41,
+      "messages": 44,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -489,6 +503,56 @@
         },
         "2026-10-18": {
           "win": 1
+        },
+        "2026-10-21": {
+          "win": 1
+        }
+      }
+    },
+    {
+      "id": "606065912847532044",
+      "display_name": "adrian",
+      "avatar": "03cd2f9825143e218a54d02ead909d4e",
+      "points": 19,
+      "win_days": 7,
+      "done_days": 0,
+      "brand_days": 6,
+      "messages": 1,
+      "daily": {
+        "2026-10-02": {
+          "win": 1
+        },
+        "2026-10-03": {
+          "brand": 2
+        },
+        "2026-10-05": {
+          "win": 1
+        },
+        "2026-10-06": {
+          "brand": 2
+        },
+        "2026-10-07": {
+          "win": 1,
+          "brand": 2
+        },
+        "2026-10-08": {
+          "win": 1
+        },
+        "2026-10-09": {
+          "win": 1
+        },
+        "2026-10-11": {
+          "brand": 2
+        },
+        "2026-10-13": {
+          "win": 1
+        },
+        "2026-10-14": {
+          "brand": 2,
+          "win": 1
+        },
+        "2026-10-20": {
+          "brand": 2
         }
       }
     },
@@ -500,7 +564,7 @@
       "win_days": 6,
       "done_days": 4,
       "brand_days": 2,
-      "messages": 101,
+      "messages": 102,
       "daily": {
         "2026-10-02": {
           "brand": 2
@@ -542,7 +606,7 @@
       "win_days": 7,
       "done_days": 5,
       "brand_days": 0,
-      "messages": 33,
+      "messages": 39,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -570,50 +634,6 @@
           "win": 1
         },
         "2026-10-20": {
-          "win": 1
-        }
-      }
-    },
-    {
-      "id": "606065912847532044",
-      "display_name": "adrian",
-      "avatar": "03cd2f9825143e218a54d02ead909d4e",
-      "points": 17,
-      "win_days": 7,
-      "done_days": 0,
-      "brand_days": 5,
-      "messages": 1,
-      "daily": {
-        "2026-10-02": {
-          "win": 1
-        },
-        "2026-10-03": {
-          "brand": 2
-        },
-        "2026-10-05": {
-          "win": 1
-        },
-        "2026-10-06": {
-          "brand": 2
-        },
-        "2026-10-07": {
-          "win": 1,
-          "brand": 2
-        },
-        "2026-10-08": {
-          "win": 1
-        },
-        "2026-10-09": {
-          "win": 1
-        },
-        "2026-10-11": {
-          "brand": 2
-        },
-        "2026-10-13": {
-          "win": 1
-        },
-        "2026-10-14": {
-          "brand": 2,
           "win": 1
         }
       }
@@ -664,11 +684,11 @@
       "id": "101057946716209152",
       "display_name": "Sam Han",
       "avatar": "a4e2e4c1f8b6c5e94eb80e1a8f96e789",
-      "points": 10,
-      "win_days": 8,
+      "points": 11,
+      "win_days": 9,
       "done_days": 0,
       "brand_days": 1,
-      "messages": 34,
+      "messages": 37,
       "daily": {
         "2026-10-02": {
           "win": 1
@@ -693,6 +713,9 @@
           "win": 1
         },
         "2026-10-19": {
+          "win": 1
+        },
+        "2026-10-20": {
           "win": 1
         }
       }
@@ -748,7 +771,7 @@
       "win_days": 2,
       "done_days": 0,
       "brand_days": 0,
-      "messages": 8,
+      "messages": 9,
       "daily": {
         "2026-10-06": {
           "win": 1
