@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T08:23:32Z",
+  "generated_at": "2026-10-25T08:22:50Z",
   "challenge_name": "October Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-10-02",
@@ -15,10 +15,10 @@
   ],
   "totals": {
     "students": 25,
-    "points": 423,
-    "messages": 765,
-    "pitches": 780,
-    "applications": 63,
+    "points": 427,
+    "messages": 802,
+    "pitches": 785,
+    "applications": 83,
     "videos": 33
   },
   "standings": {
@@ -26,14 +26,14 @@
       "leaders": [
         "750036813523189782"
       ],
-      "score": 70,
+      "score": 72,
       "tie": false
     },
     "most_active": {
       "leaders": [
         "1348508829679227002"
       ],
-      "score": 111,
+      "score": 114,
       "tie": false,
       "ineligible": [
         "750036813523189782"
@@ -45,11 +45,11 @@
       "id": "750036813523189782",
       "display_name": "Jason LindzTryz",
       "avatar": "deccfb9bbe4007c678e33bb66e811f0e",
-      "points": 70,
+      "points": 72,
       "win_days": 18,
-      "done_days": 16,
+      "done_days": 17,
       "brand_days": 10,
-      "messages": 141,
+      "messages": 146,
       "daily": {
         "2026-10-02": {
           "brand": 2,
@@ -135,6 +135,9 @@
         },
         "2026-10-23": {
           "win": 1,
+          "done": 2
+        },
+        "2026-10-24": {
           "done": 2
         }
       }
@@ -231,7 +234,7 @@
       "win_days": 6,
       "done_days": 3,
       "brand_days": 20,
-      "messages": 56,
+      "messages": 62,
       "daily": {
         "2026-10-02": {
           "brand": 2
@@ -308,11 +311,11 @@
       "id": "1288380188186644552",
       "display_name": "Everest/Ryan",
       "avatar": "d85a56c15a05a7de616788d5e88ff183",
-      "points": 48,
+      "points": 50,
       "win_days": 12,
-      "done_days": 16,
+      "done_days": 17,
       "brand_days": 2,
-      "messages": 57,
+      "messages": 71,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -380,6 +383,9 @@
           "win": 1
         },
         "2026-10-22": {
+          "done": 2
+        },
+        "2026-10-24": {
           "done": 2
         }
       }
@@ -509,7 +515,7 @@
       "win_days": 12,
       "done_days": 3,
       "brand_days": 3,
-      "messages": 46,
+      "messages": 50,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -617,7 +623,7 @@
       "win_days": 7,
       "done_days": 4,
       "brand_days": 2,
-      "messages": 111,
+      "messages": 114,
       "daily": {
         "2026-10-02": {
           "brand": 2
@@ -662,7 +668,7 @@
       "win_days": 8,
       "done_days": 5,
       "brand_days": 0,
-      "messages": 40,
+      "messages": 44,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -747,7 +753,7 @@
       "win_days": 10,
       "done_days": 0,
       "brand_days": 1,
-      "messages": 42,
+      "messages": 43,
       "daily": {
         "2026-10-02": {
           "win": 1
