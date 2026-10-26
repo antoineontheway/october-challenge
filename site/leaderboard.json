@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T08:22:50Z",
+  "generated_at": "2026-10-26T08:39:39Z",
   "challenge_name": "October Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-10-02",
@@ -15,9 +15,9 @@
   ],
   "totals": {
     "students": 25,
-    "points": 427,
-    "messages": 802,
-    "pitches": 785,
+    "points": 435,
+    "messages": 804,
+    "pitches": 800,
     "applications": 83,
     "videos": 33
   },
@@ -33,7 +33,7 @@
       "leaders": [
         "1348508829679227002"
       ],
-      "score": 114,
+      "score": 116,
       "tie": false,
       "ineligible": [
         "750036813523189782"
@@ -230,10 +230,10 @@
       "id": "82546303300546560",
       "display_name": "Andy Do",
       "avatar": "39df8942d700a6a81d9ab2c98ed69da2",
-      "points": 52,
-      "win_days": 6,
+      "points": 55,
+      "win_days": 7,
       "done_days": 3,
-      "brand_days": 20,
+      "brand_days": 21,
       "messages": 62,
       "daily": {
         "2026-10-02": {
@@ -304,6 +304,10 @@
         },
         "2026-10-23": {
           "brand": 2
+        },
+        "2026-10-25": {
+          "brand": 2,
+          "win": 1
         }
       }
     },
@@ -453,9 +457,9 @@
       "id": "1513284857390698557",
       "display_name": "Andres",
       "avatar": "f3a09e4b57c5642070b56b4d44914581",
-      "points": 32,
+      "points": 34,
       "win_days": 0,
-      "done_days": 15,
+      "done_days": 16,
       "brand_days": 1,
       "messages": 1,
       "daily": {
@@ -504,6 +508,9 @@
         },
         "2026-10-22": {
           "done": 2
+        },
+        "2026-10-25": {
+          "done": 2
         }
       }
     },
@@ -511,10 +518,10 @@
       "id": "614274180552196098",
       "display_name": "meli",
       "avatar": "9c1cd91921c4752bc6ed14b738d989ed",
-      "points": 24,
+      "points": 26,
       "win_days": 12,
       "done_days": 3,
-      "brand_days": 3,
+      "brand_days": 4,
       "messages": 50,
       "daily": {
         "2026-10-02": {
@@ -558,6 +565,9 @@
         },
         "2026-10-21": {
           "win": 1
+        },
+        "2026-10-25": {
+          "brand": 2
         }
       }
     },
@@ -619,11 +629,11 @@
       "id": "1348508829679227002",
       "display_name": "Tammy Nguyễn",
       "avatar": "960befca83b815aaec1930a7d5df1ae6",
-      "points": 19,
-      "win_days": 7,
+      "points": 20,
+      "win_days": 8,
       "done_days": 4,
       "brand_days": 2,
-      "messages": 114,
+      "messages": 116,
       "daily": {
         "2026-10-02": {
           "brand": 2
@@ -656,6 +666,9 @@
           "win": 1
         },
         "2026-10-23": {
+          "win": 1
+        },
+        "2026-10-25": {
           "win": 1
         }
       }
