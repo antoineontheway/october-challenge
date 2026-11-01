@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-31T08:37:33Z",
+  "generated_at": "2026-11-01T08:42:10Z",
   "challenge_name": "October Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-10-02",
   "challenge_end": "2026-10-31",
   "timezone": "America/Los_Angeles",
-  "final": false,
+  "final": true,
   "max_points_per_day": 5,
   "most_active_channels": [
     "general",
@@ -15,8 +15,8 @@
   ],
   "totals": {
     "students": 25,
-    "points": 493,
-    "messages": 885,
+    "points": 495,
+    "messages": 891,
     "pitches": 859,
     "applications": 89,
     "videos": 48
@@ -33,7 +33,7 @@
       "leaders": [
         "1348508829679227002"
       ],
-      "score": 129,
+      "score": 131,
       "tie": false,
       "ineligible": [
         "750036813523189782"
@@ -162,10 +162,10 @@
       "id": "82546303300546560",
       "display_name": "Andy Do",
       "avatar": "39df8942d700a6a81d9ab2c98ed69da2",
-      "points": 67,
+      "points": 69,
       "win_days": 9,
       "done_days": 4,
-      "brand_days": 25,
+      "brand_days": 26,
       "messages": 64,
       "daily": {
         "2026-10-02": {
@@ -255,6 +255,9 @@
         },
         "2026-10-30": {
           "brand": 2
+        },
+        "2026-10-31": {
+          "brand": 2
         }
       }
     },
@@ -266,7 +269,7 @@
       "win_days": 19,
       "done_days": 14,
       "brand_days": 7,
-      "messages": 68,
+      "messages": 69,
       "daily": {
         "2026-10-02": {
           "done": 2,
@@ -360,7 +363,7 @@
       "win_days": 14,
       "done_days": 18,
       "brand_days": 2,
-      "messages": 76,
+      "messages": 77,
       "daily": {
         "2026-10-02": {
           "win": 1,
@@ -713,7 +716,7 @@
       "win_days": 9,
       "done_days": 4,
       "brand_days": 2,
-      "messages": 129,
+      "messages": 131,
       "daily": {
         "2026-10-02": {
           "brand": 2
@@ -764,7 +767,7 @@
       "win_days": 12,
       "done_days": 0,
       "brand_days": 4,
-      "messages": 56,
+      "messages": 57,
       "daily": {
         "2026-10-02": {
           "win": 1
@@ -820,7 +823,7 @@
       "win_days": 9,
       "done_days": 5,
       "brand_days": 0,
-      "messages": 49,
+      "messages": 50,
       "daily": {
         "2026-10-02": {
           "win": 1,
