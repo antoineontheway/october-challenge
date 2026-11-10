@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>October Challenge</title>
-<meta name="description" content="Live leaderboard for the UGC Buildout October Challenge, updated daily.">
+<title>EOY Challenge</title>
+<meta name="description" content="Live leaderboard for the UGC Buildout EOY Challenge, updated daily.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -182,7 +182,7 @@ footer { margin-top: 24px; font-size: 0.875rem; color: var(--muted); }
   <header>
     <div>
       <p class="community" id="community"></p>
-      <h1 id="title">October Challenge</h1>
+      <h1 id="title">EOY Challenge</h1>
       <p class="dates" id="dates"></p>
     </div>
     <div class="countdown" id="countdown"></div>
@@ -205,7 +205,7 @@ footer { margin-top: 24px; font-size: 0.875rem; color: var(--muted); }
       <h2>Most Consistent: earn up to 5 points a day</h2>
       <ul>
         <li><span class="pts">+1</span><span>Post your daily win in <span class="chan">#wins</span>.</span></li>
-        <li><span class="pts">+2</span><span>Post in <span class="chan">#october-challenge</span> starting with “Done” once your 10 activities are finished. Add your pitches, applications and videos if you like.</span></li>
+        <li><span class="pts">+2</span><span>Post in <span class="chan">#eoy-challenge</span> starting with “Done” once your 10 activities are finished. Add your pitches, applications and videos if you like.</span></li>
         <li><span class="pts">+2</span><span>Share a link to your own social post in <span class="chan">#share-your-socials</span>.</span></li>
       </ul>
     </div>
@@ -275,7 +275,7 @@ footer { margin-top: 24px; font-size: 0.875rem; color: var(--muted); }
     $("community").textContent = data.community_name || "";
     $("title").textContent = data.challenge_name;
     $("dates").textContent = fmtDay(data.challenge_start, { month: "long", day: "numeric" }) + " to " +
-      fmtDay(data.challenge_end, { month: "long", day: "numeric", year: "numeric" }) + ", Pacific time";
+      fmtDay(data.challenge_end, { month: "long", day: "numeric", year: "numeric" }) + ", Pacific time. Winners announced December 21.";
 
     if (data.final || today > data.challenge_end) {
       $("countdown").innerHTML = `<strong>Final results</strong><span>The challenge has ended</span>`;

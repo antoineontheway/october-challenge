@@ -1,8 +1,8 @@
 {
-  "challenge_name": "October Challenge",
+  "challenge_name": "EOY Challenge",
   "community_name": "UGC Buildout",
-  "challenge_start": "2026-10-02",
-  "challenge_end": "2026-10-31",
+  "challenge_start": "2026-11-09",
+  "challenge_end": "2026-12-20",
   "timezone": "America/Los_Angeles",
   "student_role": "everyone",
   "excluded_user_ids": [
@@ -13,14 +13,7 @@
     "1323065660942848005"
   ],
   "admin_user_id": "1323065660942848005",
-  "removed_points": [
-    {
-      "user_id": "1288380188186644552",
-      "day": "2026-10-02",
-      "category": "brand",
-      "note": "Everest/Ryan: UGC video, not a personal brand post"
-    }
-  ],
+  "removed_points": [],
   "channels": {
     "general": "1516539768559763489",
     "wins": "1516540087666606231",
