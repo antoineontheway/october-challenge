@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T17:01:39Z",
+  "generated_at": "2026-11-19T17:10:35Z",
   "challenge_name": "EOY Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-11-09",
@@ -15,28 +15,30 @@
   ],
   "totals": {
     "students": 26,
-    "points": 185,
-    "messages": 66,
-    "pitches": 214,
-    "applications": 112,
+    "points": 198,
+    "messages": 70,
+    "pitches": 224,
+    "applications": 122,
     "videos": 1
   },
   "standings": {
     "most_consistent": {
       "leaders": [
-        "101057946716209152"
+        "101057946716209152",
+        "1513284857390698557"
       ],
-      "score": 37,
-      "tie": false
+      "score": 39,
+      "tie": true
     },
     "most_active": {
       "leaders": [
         "750036813523189782"
       ],
-      "score": 22,
+      "score": 23,
       "tie": false,
       "ineligible": [
-        "101057946716209152"
+        "101057946716209152",
+        "1513284857390698557"
       ]
     }
   },
@@ -45,10 +47,10 @@
       "id": "101057946716209152",
       "display_name": "Sam Han",
       "avatar": "a4e2e4c1f8b6c5e94eb80e1a8f96e789",
-      "points": 37,
+      "points": 39,
       "win_days": 7,
       "done_days": 6,
-      "brand_days": 9,
+      "brand_days": 10,
       "messages": 6,
       "daily": {
         "2026-11-09": {
@@ -90,6 +92,9 @@
           "win": 1,
           "done": 2,
           "brand": 2
+        },
+        "2026-11-18": {
+          "brand": 2
         }
       }
     },
@@ -97,10 +102,10 @@
       "id": "1513284857390698557",
       "display_name": "Andres",
       "avatar": "f3a09e4b57c5642070b56b4d44914581",
-      "points": 34,
-      "win_days": 8,
-      "done_days": 9,
-      "brand_days": 4,
+      "points": 39,
+      "win_days": 9,
+      "done_days": 10,
+      "brand_days": 5,
       "messages": 1,
       "daily": {
         "2026-11-09": {
@@ -141,6 +146,11 @@
         "2026-11-17": {
           "done": 2,
           "win": 1
+        },
+        "2026-11-18": {
+          "brand": 2,
+          "done": 2,
+          "win": 1
         }
       }
     },
@@ -148,11 +158,11 @@
       "id": "750036813523189782",
       "display_name": "Jason LindzTryz",
       "avatar": "deccfb9bbe4007c678e33bb66e811f0e",
-      "points": 24,
+      "points": 26,
       "win_days": 6,
       "done_days": 6,
-      "brand_days": 3,
-      "messages": 22,
+      "brand_days": 4,
+      "messages": 23,
       "daily": {
         "2026-11-09": {
           "win": 1,
@@ -184,6 +194,9 @@
         },
         "2026-11-17": {
           "win": 1
+        },
+        "2026-11-18": {
+          "brand": 2
         }
       }
     },
@@ -231,6 +244,47 @@
       }
     },
     {
+      "id": "434557217132380167",
+      "display_name": "Pasc",
+      "avatar": "66223a59a29b97da97733f61d9854524",
+      "points": 17,
+      "win_days": 5,
+      "done_days": 3,
+      "brand_days": 3,
+      "messages": 5,
+      "daily": {
+        "2026-11-09": {
+          "brand": 2
+        },
+        "2026-11-10": {
+          "win": 1
+        },
+        "2026-11-11": {
+          "done": 2,
+          "brand": 2
+        },
+        "2026-11-12": {
+          "done": 2
+        },
+        "2026-11-13": {
+          "win": 1
+        },
+        "2026-11-15": {
+          "win": 1
+        },
+        "2026-11-16": {
+          "win": 1
+        },
+        "2026-11-17": {
+          "brand": 2
+        },
+        "2026-11-18": {
+          "win": 1,
+          "done": 2
+        }
+      }
+    },
+    {
       "id": "606065912847532044",
       "display_name": "adrian",
       "avatar": "03cd2f9825143e218a54d02ead909d4e",
@@ -263,43 +317,6 @@
       }
     },
     {
-      "id": "434557217132380167",
-      "display_name": "Pasc",
-      "avatar": "66223a59a29b97da97733f61d9854524",
-      "points": 14,
-      "win_days": 4,
-      "done_days": 2,
-      "brand_days": 3,
-      "messages": 5,
-      "daily": {
-        "2026-11-09": {
-          "brand": 2
-        },
-        "2026-11-10": {
-          "win": 1
-        },
-        "2026-11-11": {
-          "done": 2,
-          "brand": 2
-        },
-        "2026-11-12": {
-          "done": 2
-        },
-        "2026-11-13": {
-          "win": 1
-        },
-        "2026-11-15": {
-          "win": 1
-        },
-        "2026-11-16": {
-          "win": 1
-        },
-        "2026-11-17": {
-          "brand": 2
-        }
-      }
-    },
-    {
       "id": "1288380188186644552",
       "display_name": "Everest/Ryan",
       "avatar": "d85a56c15a05a7de616788d5e88ff183",
@@ -307,7 +324,7 @@
       "win_days": 2,
       "done_days": 4,
       "brand_days": 1,
-      "messages": 1,
+      "messages": 2,
       "daily": {
         "2026-11-10": {
           "done": 2,
@@ -412,7 +429,7 @@
       "win_days": 2,
       "done_days": 0,
       "brand_days": 0,
-      "messages": 5,
+      "messages": 6,
       "daily": {
         "2026-11-10": {
           "win": 1
@@ -441,12 +458,16 @@
       "id": "1524924968188641290",
       "display_name": "Elizabeth",
       "avatar": "a6ed3ac579c0c042f92bb6d608aa67dc",
-      "points": 0,
-      "win_days": 0,
+      "points": 1,
+      "win_days": 1,
       "done_days": 0,
       "brand_days": 0,
-      "messages": 5,
-      "daily": {}
+      "messages": 6,
+      "daily": {
+        "2026-11-18": {
+          "win": 1
+        }
+      }
     },
     {
       "id": "524682780127395860",
