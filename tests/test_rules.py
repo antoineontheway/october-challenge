@@ -70,6 +70,16 @@ class TextChecks(unittest.TestCase):
         self.assertEqual(rules.parse_activity("done - pitches: 4, apps 6, 1 video"),
                          {"pitches": 4, "applications": 6, "videos": 1})
         self.assertEqual(rules.parse_activity("Done! 10 activities"), {})
+        cases = {
+            "Done 3 trybe videos, 5 applications, 2 pitches": {"videos": 3, "applications": 5, "pitches": 2},
+            "done 10 pitches + 1 brand video submitted": {"pitches": 10, "videos": 1},
+            "Done\nPitches: 5\nApplications: 3\nVideos: 2": {"pitches": 5, "applications": 3, "videos": 2},
+            "Done 4 pitches, 3 apps, 2 trybe submissions": {"pitches": 4, "applications": 3, "videos": 2},
+            "done ✅ 5 pitches\n2 videos\n3 trybe submissions\n1 submission": {"pitches": 5, "videos": 6},
+            "Done - Pitches: 8 / Apps: 2 / Submissions: 4": {"pitches": 8, "applications": 2, "videos": 4},
+        }
+        for text, want in cases.items():
+            self.assertEqual(rules.parse_activity(text), want, text)
 
     def test_classify_links(self):
         social, other = rules.classify_links(

@@ -43,7 +43,7 @@ SOCIAL_DOMAINS = (
 ACTIVITY_WORDS = {
     "pitches": re.compile(r"^pitch(?:es|ed|ing)?$"),
     "applications": re.compile(r"^(?:apps?|applications?|applied|apply|applies)$"),
-    "videos": re.compile(r"^(?:videos?|vids?)$"),
+    "videos": re.compile(r"^(?:videos?|vids?|submissions?)$"),  # "3 trybe submissions" are videos
 }
 NUMBER_WORDS = {w: i for i, w in enumerate(
     "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen "
@@ -78,10 +78,11 @@ def is_done(content):
 
 
 def parse_activity(content):
-    """'Done 3 trybe videos, 5 applications + 2 pitches' -> {'videos': 3, 'applications': 5, 'pitches': 2}.
+    """'Done 3 trybe videos, 5 apps + 2 pitches' -> {'videos': 3, 'applications': 5, 'pitches': 2}.
 
     Each item word takes the nearest unused number in its segment, allowing a couple of words in
-    between ("1 brand video", "Pitches sent: 10"). Missing keys are omitted.
+    between ("1 brand video", "Pitches sent: 10"). Several mentions of the same item add up
+    ("2 videos, 3 trybe submissions" -> 5 videos). Missing keys are omitted.
     """
     text = (content or "").replace("\ufe0f", "").replace("\u20e3", "")  # 5️⃣ -> 5
     found = {}
@@ -92,12 +93,12 @@ def parse_activity(content):
         used = set()
         for i, tok in enumerate(tokens):
             key = next((k for k, rx in ACTIVITY_WORDS.items() if rx.match(tok)), None)
-            if key is None or key in found:
+            if key is None:
                 continue
             # Closest first; "5 pitches" (before) wins over "pitches 5" (after) at equal distance.
             for j in (i - 1, i + 1, i - 2, i + 2, i - 3):
                 if j in nums and j not in used:
-                    found[key] = nums[j]
+                    found[key] = found.get(key, 0) + nums[j]
                     used.add(j)
                     break
     return found
