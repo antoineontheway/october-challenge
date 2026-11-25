@@ -77,6 +77,11 @@ class TextChecks(unittest.TestCase):
             "Done 4 pitches, 3 apps, 2 trybe submissions": {"pitches": 4, "applications": 3, "videos": 2},
             "done ✅ 5 pitches\n2 videos\n3 trybe submissions\n1 submission": {"pitches": 5, "videos": 6},
             "Done - Pitches: 8 / Apps: 2 / Submissions: 4": {"pitches": 8, "applications": 2, "videos": 4},
+            "Done 2 trybe submissions 10 pitches 3 apps": {"videos": 2, "pitches": 10, "applications": 3},
+            "Done Pitches: 5 Applications: 3 Videos: 2": {"pitches": 5, "applications": 3, "videos": 2},
+            "Done 10 activities: pitches 6": {"pitches": 6},
+            "Done ✅ 5 pitches, 3 applications, 2 videos submitted": {"pitches": 5, "applications": 3, "videos": 2},
+            "done 5️⃣ pitches and two UGC videos": {"pitches": 5, "videos": 2},
         }
         for text, want in cases.items():
             self.assertEqual(rules.parse_activity(text), want, text)

@@ -80,27 +80,39 @@ def is_done(content):
 def parse_activity(content):
     """'Done 3 trybe videos, 5 apps + 2 pitches' -> {'videos': 3, 'applications': 5, 'pitches': 2}.
 
-    Each item word takes the nearest unused number in its segment, allowing a couple of words in
-    between ("1 brand video", "Pitches sent: 10"). Several mentions of the same item add up
-    ("2 videos, 3 trybe submissions" -> 5 videos). Missing keys are omitted.
+    Within each segment (split on commas, "+", new lines...), item words are paired with nearby
+    numbers. The segment's style decides which side wins: "5 pitches" style (number first) pairs
+    with the number before the word, "Pitches: 5" style (word first) with the number after it.
+    A couple of words may sit in between ("1 brand video"). Several mentions of the same item add
+    up ("2 videos, 3 trybe submissions" -> 5 videos). Missing keys are omitted.
     """
     text = (content or "").replace("\ufe0f", "").replace("\u20e3", "")  # 5️⃣ -> 5
     found = {}
     for segment in SEGMENT_SPLIT.split(text):
         tokens = re.findall(r"\d+|[^\W\d_]+", segment.lower())
+        # "10 activities" is the challenge's daily count, not one of the items.
         nums = {i: int(t) if t.isdigit() else NUMBER_WORDS[t]
-                for i, t in enumerate(tokens) if t.isdigit() or t in NUMBER_WORDS}
-        used = set()
-        for i, tok in enumerate(tokens):
-            key = next((k for k, rx in ACTIVITY_WORDS.items() if rx.match(tok)), None)
-            if key is None:
-                continue
-            # Closest first; "5 pitches" (before) wins over "pitches 5" (after) at equal distance.
-            for j in (i - 1, i + 1, i - 2, i + 2, i - 3):
-                if j in nums and j not in used:
-                    found[key] = found.get(key, 0) + nums[j]
-                    used.add(j)
-                    break
+                for i, t in enumerate(tokens)
+                if (t.isdigit() or t in NUMBER_WORDS)
+                and not (i + 1 < len(tokens) and tokens[i + 1].startswith(("activit", "task")))}
+        words = {i: k for i, t in enumerate(tokens)
+                 for k, rx in ACTIVITY_WORDS.items() if rx.match(t)}
+        if not nums or not words:
+            continue
+        number_first = min(nums) < min(words)
+        pairs = []
+        for wi, key in words.items():
+            for ni in nums:
+                d = abs(ni - wi)
+                if d <= 3:
+                    preferred = (ni < wi) == number_first
+                    pairs.append((d + (0 if preferred else 1.5), wi, ni, key))
+        used_w, used_n = set(), set()
+        for _, wi, ni, key in sorted(pairs):
+            if wi not in used_w and ni not in used_n:
+                used_w.add(wi)
+                used_n.add(ni)
+                found[key] = found.get(key, 0) + nums[ni]
     return found
 
 
