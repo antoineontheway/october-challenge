@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 16 * * 1"   # Mondays, 9am Pacific
-    - cron: "0 9 1 11 *"   # Nov 1, 2am Pacific: final results
+    - cron: "0 9 21 12 *"  # Dec 21, 1am Pacific: final results
 
 permissions:
   contents: read

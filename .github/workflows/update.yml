@@ -2,8 +2,11 @@ name: Update leaderboard
 
 on:
   schedule:
-    # 08:00 UTC = 1am Pacific (PDT), just after the previous challenge day closes.
-    - cron: "0 8 * * *"
+    # GitHub often starts scheduled jobs hours late, so run three times a day. Each run rescans
+    # everything, so extra runs are harmless and the board stays fresh even when one is delayed.
+    - cron: "17 8 * * *"    # ~12:17am Pacific (just after the day closes)
+    - cron: "17 14 * * *"   # ~6:17am Pacific
+    - cron: "17 20 * * *"   # ~12:17pm Pacific
   workflow_dispatch:        # "Run workflow" button for manual refreshes
 
 permissions:
@@ -20,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: https://antoineontheway.github.io/october-challenge/
     steps:
       - uses: actions/checkout@v4
 
@@ -45,5 +48,20 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
+      # GitHub Pages publishing fails now and then ("try again later"). Retry once after a pause
+      # with a fresh upload, so a hiccup doesn't leave yesterday's board online.
       - id: deploy
         uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Wait before retrying publish
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 90
+      - if: steps.deploy.outcome == 'failure'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+          name: github-pages-retry
+      - if: steps.deploy.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-retry
