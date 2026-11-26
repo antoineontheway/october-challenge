@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T02:53:03Z",
+  "generated_at": "2026-11-26T18:26:31Z",
   "challenge_name": "EOY Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-11-09",
@@ -15,10 +15,10 @@
   ],
   "totals": {
     "students": 27,
-    "points": 303,
+    "points": 305,
     "messages": 96,
     "pitches": 308,
-    "applications": 256,
+    "applications": 266,
     "videos": 62
   },
   "standings": {
@@ -207,9 +207,9 @@
       "id": "750036813523189782",
       "display_name": "Jason LindzTryz",
       "avatar": "deccfb9bbe4007c678e33bb66e811f0e",
-      "points": 47,
+      "points": 49,
       "win_days": 11,
-      "done_days": 11,
+      "done_days": 12,
       "brand_days": 7,
       "messages": 32,
       "daily": {
@@ -272,7 +272,8 @@
         },
         "2026-11-25": {
           "win": 1,
-          "brand": 2
+          "brand": 2,
+          "done": 2
         }
       }
     },
