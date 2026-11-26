@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T18:26:31Z",
+  "generated_at": "2026-11-26T23:00:38Z",
   "challenge_name": "EOY Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-11-09",
@@ -16,7 +16,7 @@
   "totals": {
     "students": 27,
     "points": 305,
-    "messages": 96,
+    "messages": 101,
     "pitches": 308,
     "applications": 266,
     "videos": 62
@@ -285,7 +285,7 @@
       "win_days": 7,
       "done_days": 8,
       "brand_days": 6,
-      "messages": 5,
+      "messages": 6,
       "daily": {
         "2026-11-09": {
           "brand": 2
@@ -350,7 +350,7 @@
       "win_days": 8,
       "done_days": 2,
       "brand_days": 11,
-      "messages": 9,
+      "messages": 10,
       "daily": {
         "2026-11-09": {
           "brand": 2,
@@ -547,7 +547,7 @@
       "win_days": 4,
       "done_days": 0,
       "brand_days": 0,
-      "messages": 9,
+      "messages": 10,
       "daily": {
         "2026-11-10": {
           "win": 1
@@ -654,6 +654,28 @@
       "daily": {}
     },
     {
+      "id": "1556881686451462165",
+      "display_name": "Chefglobal",
+      "avatar": "9a24c852d40b54ddd911f56c47d0f8e4",
+      "points": 0,
+      "win_days": 0,
+      "done_days": 0,
+      "brand_days": 0,
+      "messages": 1,
+      "daily": {}
+    },
+    {
+      "id": "773004432593256448",
+      "display_name": "Jackson \"Naskaj\"",
+      "avatar": "2521d2ad67ed3a0095706108cb1cb927",
+      "points": 0,
+      "win_days": 0,
+      "done_days": 0,
+      "brand_days": 0,
+      "messages": 1,
+      "daily": {}
+    },
+    {
       "id": "419739053722828800",
       "display_name": "viseth",
       "avatar": "a1eb417f5204122c39a925c349d2db2e",
@@ -687,17 +709,6 @@
       "daily": {}
     },
     {
-      "id": "1556881686451462165",
-      "display_name": "Chefglobal",
-      "avatar": "9a24c852d40b54ddd911f56c47d0f8e4",
-      "points": 0,
-      "win_days": 0,
-      "done_days": 0,
-      "brand_days": 0,
-      "messages": 0,
-      "daily": {}
-    },
-    {
       "id": "1558645599761338403",
       "display_name": "Dallin Espiritu",
       "avatar": null,
@@ -712,17 +723,6 @@
       "id": "1559022153658138685",
       "display_name": "Dallin Espiritu",
       "avatar": null,
-      "points": 0,
-      "win_days": 0,
-      "done_days": 0,
-      "brand_days": 0,
-      "messages": 0,
-      "daily": {}
-    },
-    {
-      "id": "773004432593256448",
-      "display_name": "Jackson \"Naskaj\"",
-      "avatar": "2521d2ad67ed3a0095706108cb1cb927",
       "points": 0,
       "win_days": 0,
       "done_days": 0,
