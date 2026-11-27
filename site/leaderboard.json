@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T02:53:00Z",
+  "generated_at": "2026-11-27T18:12:20Z",
   "challenge_name": "EOY Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-11-09",
@@ -15,18 +15,18 @@
   ],
   "totals": {
     "students": 27,
-    "points": 305,
+    "points": 311,
     "messages": 102,
     "pitches": 308,
-    "applications": 266,
-    "videos": 62
+    "applications": 276,
+    "videos": 65
   },
   "standings": {
     "most_consistent": {
       "leaders": [
         "1513284857390698557"
       ],
-      "score": 66,
+      "score": 69,
       "tie": false
     },
     "most_active": {
@@ -45,9 +45,9 @@
       "id": "1513284857390698557",
       "display_name": "Andres",
       "avatar": "f3a09e4b57c5642070b56b4d44914581",
-      "points": 66,
-      "win_days": 16,
-      "done_days": 17,
+      "points": 69,
+      "win_days": 17,
+      "done_days": 18,
       "brand_days": 8,
       "messages": 1,
       "daily": {
@@ -125,6 +125,10 @@
           "brand": 2,
           "done": 2,
           "win": 1
+        },
+        "2026-11-26": {
+          "done": 2,
+          "win": 1
         }
       }
     },
@@ -132,9 +136,9 @@
       "id": "101057946716209152",
       "display_name": "Sam Han",
       "avatar": "a4e2e4c1f8b6c5e94eb80e1a8f96e789",
-      "points": 50,
-      "win_days": 12,
-      "done_days": 7,
+      "points": 53,
+      "win_days": 13,
+      "done_days": 8,
       "brand_days": 12,
       "messages": 10,
       "daily": {
@@ -200,6 +204,10 @@
         },
         "2026-11-25": {
           "win": 1
+        },
+        "2026-11-26": {
+          "win": 1,
+          "done": 2
         }
       }
     },
