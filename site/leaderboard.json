@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T18:12:20Z",
+  "generated_at": "2026-11-27T22:44:35Z",
   "challenge_name": "EOY Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-11-09",
@@ -15,8 +15,8 @@
   ],
   "totals": {
     "students": 27,
-    "points": 311,
-    "messages": 102,
+    "points": 313,
+    "messages": 103,
     "pitches": 308,
     "applications": 276,
     "videos": 65
@@ -26,7 +26,7 @@
       "leaders": [
         "1513284857390698557"
       ],
-      "score": 69,
+      "score": 71,
       "tie": false
     },
     "most_active": {
@@ -45,10 +45,10 @@
       "id": "1513284857390698557",
       "display_name": "Andres",
       "avatar": "f3a09e4b57c5642070b56b4d44914581",
-      "points": 69,
+      "points": 71,
       "win_days": 17,
       "done_days": 18,
-      "brand_days": 8,
+      "brand_days": 9,
       "messages": 1,
       "daily": {
         "2026-11-09": {
@@ -129,6 +129,9 @@
         "2026-11-26": {
           "done": 2,
           "win": 1
+        },
+        "2026-11-27": {
+          "brand": 2
         }
       }
     },
@@ -555,7 +558,7 @@
       "win_days": 4,
       "done_days": 0,
       "brand_days": 0,
-      "messages": 10,
+      "messages": 11,
       "daily": {
         "2026-11-10": {
           "win": 1
