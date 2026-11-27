@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T23:00:38Z",
+  "generated_at": "2026-11-27T02:53:00Z",
   "challenge_name": "EOY Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-11-09",
@@ -16,7 +16,7 @@
   "totals": {
     "students": 27,
     "points": 305,
-    "messages": 101,
+    "messages": 102,
     "pitches": 308,
     "applications": 266,
     "videos": 62
@@ -632,6 +632,17 @@
       "daily": {}
     },
     {
+      "id": "773004432593256448",
+      "display_name": "Jackson \"Naskaj\"",
+      "avatar": "2521d2ad67ed3a0095706108cb1cb927",
+      "points": 0,
+      "win_days": 0,
+      "done_days": 0,
+      "brand_days": 0,
+      "messages": 2,
+      "daily": {}
+    },
+    {
       "id": "616253788692676620",
       "display_name": "LaisVang",
       "avatar": "35ce193589e2e25bfc79982db8bf4d0a",
@@ -657,17 +668,6 @@
       "id": "1556881686451462165",
       "display_name": "Chefglobal",
       "avatar": "9a24c852d40b54ddd911f56c47d0f8e4",
-      "points": 0,
-      "win_days": 0,
-      "done_days": 0,
-      "brand_days": 0,
-      "messages": 1,
-      "daily": {}
-    },
-    {
-      "id": "773004432593256448",
-      "display_name": "Jackson \"Naskaj\"",
-      "avatar": "2521d2ad67ed3a0095706108cb1cb927",
       "points": 0,
       "win_days": 0,
       "done_days": 0,
