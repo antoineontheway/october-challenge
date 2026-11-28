@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T22:44:35Z",
+  "generated_at": "2026-11-28T02:43:50Z",
   "challenge_name": "EOY Challenge",
   "community_name": "UGC Buildout",
   "challenge_start": "2026-11-09",
@@ -16,7 +16,7 @@
   "totals": {
     "students": 27,
     "points": 313,
-    "messages": 103,
+    "messages": 105,
     "pitches": 308,
     "applications": 276,
     "videos": 65
@@ -558,7 +558,7 @@
       "win_days": 4,
       "done_days": 0,
       "brand_days": 0,
-      "messages": 11,
+      "messages": 12,
       "daily": {
         "2026-11-10": {
           "win": 1
@@ -606,7 +606,7 @@
       "win_days": 2,
       "done_days": 0,
       "brand_days": 0,
-      "messages": 7,
+      "messages": 8,
       "daily": {
         "2026-11-18": {
           "win": 1
